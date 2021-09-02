@@ -11,7 +11,7 @@
           "announcement_bar_enabled": true,
           "announcement_bar_text": "Annoncez quelque chose ici",
           "announcement_bar_url": "",
-          "announcement_bar_color_background": "#FAF3EC",
+          "announcement_bar_color_background": "#faf3ec",
           "announcement_bar_color_text": "#000000"
         }
       },
@@ -19,7 +19,7 @@
         "type": "image-with-text",
         "settings": {
           "title": "omeide",
-          "text": "",
+          "text": "<p>blablablabla<strong>blablabla <\/strong><em><strong>teste<\/strong><\/em><\/p>",
           "button_label": "",
           "button_url": "",
           "desktop_layout": "right",
@@ -157,9 +157,9 @@
         ],
         "settings": {
           "show_payment_icons": false,
-          "color_footer_background": "#FAF3EC",
+          "color_footer_background": "#faf3ec",
           "color_footer_heading_text": "#000000",
-          "color_footer_body_text": "#746B60",
+          "color_footer_body_text": "#746b60",
           "show_locale_selector": true
         }
       }
