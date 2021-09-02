@@ -1,0 +1,29 @@
+shopify login --store omeide.myshopify.com
+shopify login --store omeide-france-fr.myshopify.com
+
+id du thème : 120401428563
+
+pull
+shopify theme pull --themeid 120401428563
+
+lancer en local
+shopify theme serve
+
+=================================================================
+
+Se connecter au theme :
+    shopify login --store omeide-france-fr.myshopify.com
+
+Id du thème : 120401428563
+
+Pull le theme
+    shopify theme pull --themeid 120401428563
+
+Lancer en local 
+    shopify theme serve
+
+Check les erreurs
+    shopify theme check
+
+Push 
+    shopify theme push
