@@ -162,6 +162,11 @@
           "color_footer_body_text": "#746b60",
           "show_locale_selector": true
         }
+      },
+      "163058229506329c87": {
+        "type": "banner",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
@@ -170,7 +175,8 @@
       "featured-product",
       "image-with-text-1",
       "image-with-text-2",
-      "image-with-text-3"
+      "image-with-text-3",
+      "163058229506329c87"
     ]
   },
   "presets": {
