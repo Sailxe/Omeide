@@ -162,7 +162,12 @@ main{
 	// diapo automatisé
 
 	timer = setInterval(slideNext, 6000)
-  
+    
+    next.addEventListener("mouseover",stopTimer)
+	next.addEventListener("mouseout",startTimer)
+
+	prev.addEventListener("mouseover",stopTimer)
+	prev.addEventListener("mouseout",startTimer)
 	}
 
 	
@@ -184,5 +189,14 @@ main{
 	  elements.style.transform = `translateX(${decal}px)`
   }
 
+	
+  function stopTimer(){
+		clearInterval(timer)
+  }
 
+  function stopTimer(){
+		timer = setInterval(slideNext, 6000)
+  }
+
+ 
 {% endjavascript %}
