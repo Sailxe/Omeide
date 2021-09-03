@@ -102,10 +102,16 @@
           "color_footer_body_text": "#746b60",
           "show_locale_selector": true
         }
+      },
+      "1630660208e4a20afc": {
+        "type": "full-banner",
+        "settings": {
+          "heading": ""
+        }
       }
     },
     "content_for_index": [
-
+      "1630660208e4a20afc"
     ]
   },
   "presets": {
