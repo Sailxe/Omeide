@@ -3,15 +3,31 @@
   <h1>{{section.settings.heading}}</h1>
   <div class="diapo">
       <div class="elements">
+        {% assign premier = true %}
         {%for block in section.blocks %}
-          <div class="element active">
-                <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
+        		{% if premier == true%}
+                  <div class="element active">
 
-            <div class="caption">
-              <h2>Image</h2>
+                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
 
-            </div>
-          </div>
+                      <div class="caption">
+                        <h2>Image</h2>
+
+                      </div>
+                    </div>
+            		{% assign premier = false %}
+            	{% elsif premier == false%}
+                    <div class="element">
+
+                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
+
+                        <div class="caption">
+                          <h2>Image</h2>
+
+                        </div>
+                      </div>
+            	{% endif %}
+          
         {%endfor%}
        </div>
     <i id="nav-gauche" class="las la-chevron-left"></i>	
