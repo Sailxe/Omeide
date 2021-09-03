@@ -152,16 +152,16 @@ main{
 	
 	let next = document.querySelector("#nav-droite")
 	
+	nImage = slides.length + 1;
+
 	next.addEventListener("click",slideNext)
 	}
 
-
+	
   function slideNext(){
 	  console.log("test")
       compteur++
-      if(compteur == slides.length + 1 ){
-         compteur = 0
-      }
+      compteur %= nImage
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
   }
