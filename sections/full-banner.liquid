@@ -137,7 +137,34 @@ main{
 
 {% javascript %}
 
-	//var time = 3;
-	//var image = document.getElementsByClassName('imageHomePage');
+	//variables
+
+	let compteur = 0
+	let timer, elements, slides
+
+	window.onload = () => {
+	
+	const diapo = document.querySelector(".diapo")
+	let elements = document.querySelector(".elements");
+	let sllides = Array.from(elements.children)
+	
+	//largeur du diapo
+	slideWidth = diapo.getBoundingClientRect().width
+	
+	let next = document.querySelector("#nav-droite")
+	
+	next.addEventListener("click",slideNext)
+	}
+
+
+  function slideNext(){
+      compteur++
+      if(compteur == slides.length){
+          compteur = 0
+      }
+      let decal = -slideWidth * compteur
+	  elements.style.transform = `translateX(${decal}px)`
+  }
+
 
 {% endjavascript %}
