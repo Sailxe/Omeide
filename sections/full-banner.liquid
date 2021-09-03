@@ -15,7 +15,7 @@
         {%endfor%}
        </div>
     <i id="nav-gauche" class="las la-chevron-left"></i>	
-    <i id="nav-right" class="las la-chevron-right"></i>
+    <i id="nav-droite" class="las la-chevron-right"></i>
   </div>
 </main>
 {% schema %}
@@ -54,8 +54,36 @@
 
 {% stylesheet %}
 
+
+
 body{
 	margin:0;
+}
+
+main{
+	width:80%;
+	margin:auto;
+}
+
+.diapo{
+	position: relative;
+	overflow: hidden;
+}
+
+#nav-droite,#nav-gauche{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	font-size: 3em;
+}
+
+#nav-droite{
+	right: 20px;
+}
+
+#nav-gauche{
+	left: 20px;
 }
 
 .imageHomePage{
