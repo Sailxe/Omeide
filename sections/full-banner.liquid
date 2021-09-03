@@ -138,15 +138,14 @@ main{
 {% javascript %}
 
 	//variables
-
 	let compteur = 0
 	let timer, elements, slides, slideWidth
 
 	window.onload = () => {
 	
 	const diapo = document.querySelector(".diapo")
-	elements = document.querySelector(".elements");
-	slides = Array.from(elements.children)
+	elements = document.querySelector(".elements")
+	slides = document.getElementsByClassName("element")
 	
 	//largeur du diapo
 	slideWidth = diapo.getBoundingClientRect().width
@@ -160,7 +159,7 @@ main{
   function slideNext(){
 	  console.log("test")
       compteur++
-      if(compteur == 5){
+      if(compteur == slides.length + 1 ){
          compteur = 0
       }
       let decal = -slideWidth * compteur
