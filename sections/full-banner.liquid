@@ -146,7 +146,7 @@ main{
 	
 	const diapo = document.querySelector(".diapo")
 	let elements = document.querySelector(".elements");
-	let sllides = Array.from(elements.children)
+	let slides = Array.from(elements.children)
 	
 	//largeur du diapo
 	slideWidth = diapo.getBoundingClientRect().width
@@ -158,7 +158,7 @@ main{
 
 
   function slideNext(){
-		console.log("test")
+	  console.log("test")
       compteur++
       if(compteur == slides.lenght){
           compteur = 0
