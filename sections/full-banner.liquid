@@ -163,6 +163,7 @@ main{
 
 	
   function slideNext(){ 
+	  console.log("test")
       compteur++
       compteur %= nImage
       let decal = -slideWidth * compteur
@@ -170,7 +171,8 @@ main{
   }
 
   function slidePrev(){ 
-      compteur--
+	  console.log("test")
+      compteur++
       compteur %= nImage
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
