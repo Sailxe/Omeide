@@ -1,19 +1,22 @@
 <h1>{{section.settings.heading}}</h1>
+<main>
+  <div class="diapo">
+      <div class="element">
+        {%for block in section.blocks %}
+          <div class="element active">
+                <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
 
-  <div class="element">
-    {%for block in section.blocks %}
-      <div class="element active">
-            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
+            <div class="caption">
+              <h2>Image</h2>
 
-        <div class="caption">
-          <h2>Image</h2>
-
-        </div>
-      </div>
-    {%endfor%}
-   </div>
-<i id="nav-gauche" class="las la-chevron-left"></i>	
-<i id="nav-right" class="las la-chevron-right"></i>
+            </div>
+          </div>
+        {%endfor%}
+       </div>
+    <i id="nav-gauche" class="las la-chevron-left"></i>	
+    <i id="nav-right" class="las la-chevron-right"></i>
+  </div>
+</main>
 {% schema %}
   {
     "name": "Full-banner",
@@ -49,6 +52,10 @@
 {% endschema %}
 
 {% stylesheet %}
+
+body{
+	margin:0;
+}
 
 .imageHomePage{
 	
