@@ -152,16 +152,25 @@ main{
 	slideWidth = diapo.getBoundingClientRect().width
 	
 	let next = document.querySelector("#nav-droite")
-	
+	let prev = document.querySelector("#nav-gauche")
+
 	nImage = slides.length;
 
 	next.addEventListener("click",slideNext)
+	next.addEventListener("click",slidePrev)
+
 	}
 
 	
   function slideNext(){ 
-	  console.log("test")
       compteur++
+      compteur %= nImage
+      let decal = -slideWidth * compteur
+	  elements.style.transform = `translateX(${decal}px)`
+  }
+
+  function slidePrev(){ 
+      compteur--
       compteur %= nImage
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
