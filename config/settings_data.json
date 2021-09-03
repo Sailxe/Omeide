@@ -129,20 +129,13 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/IMG_4070.jpg"
             }
-          },
-          "0dd3c207-f446-46fb-9994-8738841a6b12": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/image-produit-generale.jpg"
-            }
           }
         },
         "block_order": [
           "da943aea-79e3-42bc-9c8e-43c2b3393ec3",
           "56036843-c410-4791-a384-2ac7352c4615",
           "c5baac6f-60d2-4f30-af87-910d8bfcb296",
-          "6c5d9e31-ea32-4d6f-ac35-928063e8cc01",
-          "0dd3c207-f446-46fb-9994-8738841a6b12"
+          "6c5d9e31-ea32-4d6f-ac35-928063e8cc01"
         ],
         "settings": {
           "heading": "Omeide"
