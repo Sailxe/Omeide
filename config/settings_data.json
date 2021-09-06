@@ -141,7 +141,8 @@
           "heading": "Le meilleur savon",
           "sousText": "c'est celui qu'on fait soi-même",
           "buttonText": "Je découvre",
-          "buttonLien": "https:\/\/www.omeide-france.fr\/"
+          "buttonLien": "https:\/\/www.omeide-france.fr\/",
+          "transitionTime": "6000"
         }
       }
     },
