@@ -271,11 +271,11 @@ main{
 	//variables
 	let compteur = 0
 	let timer, elements, slides, slideWidth
-	//let time = {{section.settings.transitionTime}}  
+	let time = {{section.settings.transitionTime | json}}  
 	const boitePoint = document.getElementById("petitPoint")
 	
 	 
-	
+	consol.log(time) 
 
 	window.onload = () => {
 	
@@ -357,7 +357,7 @@ main{
   }
 
   function pointColor(){
-	var lesPoints = boitePoint.childNodes
+	var lesPoints = document.getElementsByClassName("point")
       for(i=0;i<nImage;i++){
 		if(i==compteur){
 			lesPoints[i].style.color = "white";   
