@@ -268,13 +268,13 @@ main{
 
 	nImage = slides.length;
 	
-	var point = nImage*[] 
+
 	
 	for(i=0;i<nImage;i++){ 
-        point[i] = document.createElement("div") 
-    	boitePoint.appendChild(point[i])  
+        point = document.createElement("div")  
+    	boitePoint.appendChild(point)  
   		
-        point[i].innerHTML = "•"  
+        point.innerHTML = "•"  
     }
 
 	next.addEventListener("click",slideNext)
