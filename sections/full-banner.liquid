@@ -31,7 +31,7 @@
         {%endfor%}
        </div>
     {% if section.settings.fleche %}
-    <div id="nav-gauche" class="las la-chevron-left"><img src="{{section.settings.fleche | img_url:'50px'}}"></div>	
+    <div id="nav-gauche" class="las la-chevron-left"><img id="image-gauche" src="{{section.settings.fleche | img_url:'50px'}}"></div>	
     <div id="nav-droite" class="las la-chevron-right"><img src="{{section.settings.fleche | img_url:'50px'}}"></div>
     {% else %}
     <div id="nav-gauche" class="las la-chevron-left">←</div>	
@@ -152,14 +152,15 @@ main{
 
 #nav-droite{
 	right: 20px;
-	image-orientation: 180deg; 
 }
 
 #nav-gauche{
 	left: 20px;
 }
 
-
+#image-gauche{
+	image-orientation: 180deg; 
+}
 
 .titre{
 	 
