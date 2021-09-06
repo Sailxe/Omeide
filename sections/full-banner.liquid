@@ -253,7 +253,7 @@ main{
 	//variables
 	let compteur = 0
 	let timer, elements, slides, slideWidth
-	
+	let time = {{section.settings.transitionTime}} 
 	const boitePoint = document.getElementById("petitPoint")
 	
 	 
@@ -349,7 +349,7 @@ main{
   }
  
   function startTimer(){
-		timer = setInterval(slideNext, {{section.settings.transitionTime}})  
+		timer = setInterval(slideNext, time)  
   }
 
  
