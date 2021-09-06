@@ -34,6 +34,9 @@
     <i id="nav-droite" class="las la-chevron-right">→</i>
     <h2 class="titre">{{section.settings.heading}}</h2>
     <h3 class="sousText">{{section.settings.sousText}}</h3>
+    <a href="{{section.settings.buttonLien}}">
+      <div class="bouton"><p class="textBouton">{{buttonText}}</p></div>
+    </a>
     
   </div>
 </main>
@@ -50,6 +53,16 @@
 						"type":"text",
 						"label":"sous-text",
 						"id":"sousText"
+					},
+  					{
+						"type":"text",
+						"label":"text-bouton",
+						"id":"buttonText"
+					},
+  					{
+						"type":"text",
+						"label":"lien-bouton",
+						"id":"buttonLien"
 					}
 
 				],
