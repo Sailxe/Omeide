@@ -251,7 +251,7 @@ main{
 	
 	const boitePoint = document.getElementById("petitPoint")
 	const point = document.createElement("div")
-	point.innerHTML = "•"; 
+	 
 	
 
 	window.onload = () => {
@@ -272,6 +272,7 @@ main{
 	
 	for(i=0;i<nImage;i++){ 
     	boitePoint.appendChild(point) 
+        point.innerHTML = "•" 
     }
 
 	next.addEventListener("click",slideNext)
