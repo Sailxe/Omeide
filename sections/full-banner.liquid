@@ -331,14 +331,7 @@ main{
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
                            
-      var lesPoints = document.getElementsByClassName("point")
-      for(i=0;i<nImage;i++){
-		if(i==compteur){
-			lesPoints[i].style.color = "white";
-		}else{
-			lesPoints[i].style.color = "black"; 
-		}
-	  }
+      function pointColor()
   }
 
   function slidePrev(){  
@@ -350,14 +343,7 @@ main{
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
 
-	  var lesPoints = document.getElementsByClassName("point")
-      for(i=0;i<nImage;i++){
-		if(i==compteur){
-			lesPoints[i].style.color = "white";   
-		}else{
-			lesPoints[i].style.color = "black";
-		}
-	  }
+	  function pointColor()
       for(i=0;i<1;i++){} 
   }
 
@@ -370,7 +356,17 @@ main{
 		timer = setInterval(slideNext, 6000)     
   }
 
+  function pointColor(){
+	var lesPoints = document.getElementsByClassName("point")
+      for(i=0;i<nImage;i++){
+		if(i==compteur){
+			lesPoints[i].style.color = "white";   
+		}else{
+			lesPoints[i].style.color = "black"; 
+		}
+	  }
   
+  }
 
  
 {% endjavascript %}
