@@ -37,14 +37,14 @@
     <div id="nav-gauche" class="las la-chevron-left">←</div>	
     <div id="nav-droite" class="las la-chevron-right">→</div>
     {% endif %}
-    <div class="presentationBox">
+    
       <h2 class="titre">{{section.settings.heading}}</h2>
       <h3 class="sousText">{{section.settings.sousText}}</h3>
 
       <a class="lienHomePage" href="{{section.settings.buttonLien}}">
         <div class="bouton"><p class="textBouton">{{section.settings.buttonText}}</p></div>
       </a>
-    </div>
+    
     
   </div>
 </main>
@@ -180,6 +180,7 @@ main{
 }
 
 .presentationBox{ 
+	
 	position: absolute;
 	top: 30%;
 	right: 50%;
@@ -187,6 +188,7 @@ main{
 	display:flex;
 	justify-content:center;
 	align-items:center;
+	
 }
 
 //===========================================================
