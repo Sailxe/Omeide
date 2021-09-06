@@ -143,7 +143,6 @@
           "buttonText": "Je découvre",
           "buttonLien": "https:\/\/www.omeide-france.fr\/",
           "transitionTime": "6000",
-          "fleche": "shopify:\/\/shop_images\/lake-this-way-sign.jpg",
           "points": "#fd5757",
           "lePoint": "#99a1df"
         }
