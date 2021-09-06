@@ -282,12 +282,12 @@ main{
 	
 	//variables
 	let compteur = 0
-	let timer, elements, slides, slideWidth  
-	var time = document.getElementById("time").innerText;    
+	let timer, elements, slides, slideWidth   
 	const boitePoint = document.getElementById("petitPoint")  
-	
-	  
-	console.log(time)   
+
+	var time = document.getElementById("time").innerText; 
+	var color1 = document.getElementById("color1").innerText;
+	var color2 = document.getElementById("color2").innerText;
 
 	window.onload = () => {
 	
@@ -318,7 +318,7 @@ main{
 
 	// diapo automatisé
 
-	timer = setInterval(slideNext, 6000)
+	timer = setInterval(slideNext, time)
     
     next.addEventListener("mouseover",stopTimer)
 	next.addEventListener("mouseout",startTimer)
@@ -365,7 +365,7 @@ main{
   }
  
   function startTimer(){
-		timer = setInterval(slideNext, 6000)     
+		timer = setInterval(slideNext, time)     
   }
 
   function pointColor(){
