@@ -31,11 +31,11 @@
         {%endfor%}
        </div>
     {% if section.settings.fleche %}
-    <i id="nav-gauche" class="las la-chevron-left"><img src="{{section.settings.fleche | img_url:'50px'}}"></i>	
-    <i id="nav-droite" class="las la-chevron-right"><img src="{{section.settings.fleche | img_url:'50px'}}"></i>
+    <div id="nav-gauche" class="las la-chevron-left"><img src="{{section.settings.fleche | img_url:'50px'}}"></div>	
+    <div id="nav-droite" class="las la-chevron-right"><img src="{{section.settings.fleche | img_url:'50px'}}"></div>
     {% else %}
-    <i id="nav-gauche" class="las la-chevron-left">←</i>	
-    <i id="nav-droite" class="las la-chevron-right">→</i>
+    <div id="nav-gauche" class="las la-chevron-left">←</div>	
+    <div id="nav-droite" class="las la-chevron-right">→</div>
     {% endif %}
     <h2 class="titre">{{section.settings.heading}}</h2>
     <h3 class="sousText">{{section.settings.sousText}}</h3>
