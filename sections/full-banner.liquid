@@ -46,19 +46,20 @@
       </a>
       <div id="petitPoint">
       </div> 
+      <div id="data">
+        <div id="time">
+          {{section.settings.transitionTime}}
+        </div>
+        <div id ="color1">
+          {{section.settings.points}}
+        </div>
+        <div id ="color2">
+          {{section.settings.lePoint}} 
+        </div>
+      </div>
     </div>
     
-    <div id="data">
-      <div id="time">
-        {{section.settings.transitionTime}}
-      </div>
-      <div id ="color1">
-        {{section.settings.points}}
-      </div>
-      <div id ="color2">
-        {{section.settings.lePoint}} 
-      </div>
-    </div>
+    
     
   </div>
 </main>
@@ -133,12 +134,12 @@
 
 {% stylesheet %}
 
-.data{
-	position: absolute;
-	top:20%;
-	left:3000px;
+.data{ 
 	z-index:-1; 
 }
+.time,.color1,.color2{
+}
+
 
 body{
 	margin:0;
