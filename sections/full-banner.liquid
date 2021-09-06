@@ -279,7 +279,8 @@ main{
         point = document.createElement("div")  
     	boitePoint.appendChild(point)  
   		
-        point.innerHTML = "• "    
+        point.classList.add("point")
+        point.innerHTML = "•"    
     }
 
 	next.addEventListener("click",slideNext)
@@ -311,6 +312,15 @@ main{
       compteur %= nImage 
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
+                           
+      var lesPoints = document.getElementsByClassName("point")
+      for(i=0;i<nImage;i++){
+		if(i==compteur){
+			lesPoints[i].style.color = "white";
+		}else{
+			lesPoints[i].style.color = "black";
+		}
+	  }
   }
 
   function slidePrev(){  
@@ -321,6 +331,15 @@ main{
 		}
       let decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
+
+	  var lesPoints = document.getElementsByClassName("point")
+      for(i=0;i<nImage;i++){
+		if(i==compteur){
+			lesPoints[i].style.color = "white";
+		}else{
+			lesPoints[i].style.color = "black";
+		}
+	  } 
   }
 
 	
