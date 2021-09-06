@@ -1,6 +1,6 @@
 
 <main>
-  <h1>{{section.settings.heading}}</h1>
+  
   <div class="diapo">
       <div class="elements">
         {% assign premier = true %}
@@ -32,6 +32,9 @@
        </div>
     <i id="nav-gauche" class="las la-chevron-left">←</i>	
     <i id="nav-droite" class="las la-chevron-right">→</i>
+    <h2 class="titre">{{section.settings.heading}}</h2>
+    <h3 class="sousText">{{section.settings.sousText}}</h3>
+    
   </div>
 </main>
 {% schema %}
@@ -42,6 +45,11 @@
 						"type":"text",
 						"label":"titre",
 						"id":"heading"
+					},
+  					{
+						"type":"text",
+						"label":"sous-text",
+						"id":"sousText"
 					}
 
 				],
