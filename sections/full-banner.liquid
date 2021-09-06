@@ -40,7 +40,7 @@
     <h2 class="titre">{{section.settings.heading}}</h2>
     <h3 class="sousText">{{section.settings.sousText}}</h3>
     
-    <a href="{{section.settings.buttonLien}}">
+    <a class="lienHomePage" href="{{section.settings.buttonLien}}">
       <div class="bouton"><p class="textBouton">{{section.settings.buttonText}}</p></div>
     </a>
     
@@ -138,6 +138,39 @@ main{
 #nav-gauche{
 	left: 20px;
 }
+
+.titre{
+	position: absolute;
+	top: 20%;
+	right: 50px;
+	color:white;
+	font-size: 21px;
+}
+
+.sousText{
+	position: absolute;
+	top: 30%;
+	right: 50px;
+	color:white;
+	font-size: 18px;
+}
+
+.lienHomePage{
+	position: absolute;
+	top: 50%;
+	right: 50px;
+}
+.bouton{
+	width: 200px;
+	heigth: 30px;
+	background-color:white;
+}
+.textBouton{
+	color:blue;
+	font-size: 11px
+}
+
+
 
 
 .elements{
