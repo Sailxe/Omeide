@@ -249,7 +249,10 @@ main{
 	let compteur = 0
 	let timer, elements, slides, slideWidth
 	
-	const boitePoint = document.get
+	const boitePoint = document.getElementById("petitPoint")
+	const point = document.createElement("div")
+	point.innerHTML = "•"; 
+	
 
 	window.onload = () => {
 	
@@ -264,6 +267,12 @@ main{
 	let prev = document.querySelector("#nav-gauche")
 
 	nImage = slides.length;
+	
+
+	
+	for(i=0;i<nImage;i++){ 
+    	boitePoint.appendChild("point")
+    }
 
 	next.addEventListener("click",slideNext)
 	prev.addEventListener("click",slidePrev) 
