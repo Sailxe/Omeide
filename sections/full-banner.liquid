@@ -30,10 +30,16 @@
           
         {%endfor%}
        </div>
+    {% if section.settings.fleche %}
+    <i id="nav-gauche" class="las la-chevron-left"><img src="{{section.settings.fleche}}"></i>	
+    <i id="nav-droite" class="las la-chevron-right"><img src="{{section.settings.fleche}}"></i>
+    {% else %}
     <i id="nav-gauche" class="las la-chevron-left">←</i>	
     <i id="nav-droite" class="las la-chevron-right">→</i>
+    {% endif %}
     <h2 class="titre">{{section.settings.heading}}</h2>
     <h3 class="sousText">{{section.settings.sousText}}</h3>
+    
     <a href="{{section.settings.buttonLien}}">
       <div class="bouton"><p class="textBouton">{{section.settings.buttonText}}</p></div>
     </a>
@@ -68,6 +74,11 @@
 						"type":"text",
 						"label":"temp entre les transition (en ms)",
 						"id":"transitionTime"
+					},
+					{
+						"type":"image_picker",
+						"label":"Les flêches",
+						"id" : "fleche"
 					}
 
 				],
