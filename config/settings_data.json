@@ -138,7 +138,10 @@
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01"
         ],
         "settings": {
-          "heading": "Omeide"
+          "heading": "Le meilleur savon",
+          "sousText": "c'est celui qu'on fait soi-même",
+          "buttonText": "Je découvre",
+          "buttonLien": "https:\/\/www.omeide-france.fr\/"
         }
       }
     },
