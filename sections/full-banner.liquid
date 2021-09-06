@@ -250,7 +250,7 @@ main{
 	let timer, elements, slides, slideWidth
 	
 	const boitePoint = document.getElementById("petitPoint")
-	var point = document.createElement("div") 
+	
 	 
 	
 
@@ -268,12 +268,13 @@ main{
 
 	nImage = slides.length;
 	
-
+	var point[] = nImage*[]
 	
 	for(i=0;i<nImage;i++){ 
-    	boitePoint.appendChild(point)  
-        boitePoint.appendChild(point)  
-        point.innerHTML = "•" 
+        point[i] = document.createElement("div") 
+    	boitePoint.appendChild(point[i])  
+  		
+        point[i].innerHTML = "•"  
     }
 
 	next.addEventListener("click",slideNext)
