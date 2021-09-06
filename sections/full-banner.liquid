@@ -312,6 +312,7 @@ main{
         point.classList.add("point")
         point.innerHTML = "•"    
     }
+    pointColor() 
 
 	next.addEventListener("click",slideNext)
 	prev.addEventListener("click",slidePrev) 
@@ -372,9 +373,9 @@ main{
 	var lesPoints = document.getElementsByClassName("point")
       for(i=0;i<nImage;i++){
 		if(i==compteur){
-			lesPoints[i].style.color = color1;    
+			lesPoints[i].style.color = color2;    
 		}else{
-			lesPoints[i].style.color = color2;  
+			lesPoints[i].style.color = color1;  
 		}
 	  }
   
