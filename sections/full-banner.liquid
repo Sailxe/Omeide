@@ -267,11 +267,12 @@ main{
 {% endstylesheet %}
 
 {% javascript %}
-
+	
+	{% assign time = section.settings.transitionTime %} 
 	//variables
 	let compteur = 0
 	let timer, elements, slides, slideWidth
-	let time = "{{section.settings.transitionTime}}"   
+	let time = {{time}}  
 	const boitePoint = document.getElementById("petitPoint")
 	
 	 
