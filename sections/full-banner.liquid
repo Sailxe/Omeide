@@ -525,16 +525,14 @@ main{
 	  	 elements.style.transform = `translateX(${decal}px)`
 
      	}
-  
+        
   function swaper(){
-          var lesImage = document.getElementsByClassName("imageHomePage")  
-          
-          for(i=0;i<slides.length -1;i++){
-            lesImage[i].addEventListener("mousedown",function(){ 
-                console.log("click")   
-            })
-          }
+        
+        elements.addEventListener("mousedown",function(){
+			console.log("click")
+        })
+ 
         }
-  swaper() 
+ swaper() 
  
 {% endjavascript %}
