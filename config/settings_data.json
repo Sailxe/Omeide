@@ -176,8 +176,8 @@
         ],
         "settings": {
           "transitionTime": "9000",
-          "points": "#ffffff",
-          "lePoint": "#000000"
+          "points": "#cf1b1b",
+          "lePoint": "#2353ca"
         }
       }
     },
