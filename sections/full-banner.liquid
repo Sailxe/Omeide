@@ -458,7 +458,7 @@ main{
          decal = -slideWidth * (nImage)  
 	  	 elements.style.transform = `translateX(${decal}px)`     
          setTimeout(slideNextinfinit,1001)    
-          
+         timer = setInterval(slideNext, time) 
       }else{ 
       	decal = -slideWidth * compteur
 	  	elements.style.transform = `translateX(${decal}px)`
