@@ -454,9 +454,17 @@ main{
 	  console.log("test")
       compteur++
       compteur %= nImage 
-      let decal = -slideWidth * compteur
-	  elements.style.transform = `translateX(${decal}px)`
-                           
+      if(compteur == 0){
+         let decal = -slideWidth * nImage
+	  	 elements.style.transform = `translateX(${decal}px)   
+         elements.style.transition: "0s linear"
+         let decal = -slideWidth * compteur
+	  	 elements.style.transform = `translateX(${decal}px)`
+         elements.style.transition: "1s linear" 
+      }else{
+      	let decal = -slideWidth * compteur
+	  	elements.style.transform = `translateX(${decal}px)`
+      }          
       pointColor()
   }
 
