@@ -501,11 +501,11 @@ main{
   }
 
   function slideNextinfinit(){
-        elements.style.transition= "all 0s linear 0s" 
+        elements.style.transition= "0s linear" 
          compteur = 0  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
-         elements.style.transition= "1s linear"
+         setTimeout(function(){elements.style.transition= "1s linear"},1001)
         }
  
 {% endjavascript %}
