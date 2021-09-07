@@ -458,10 +458,11 @@ main{
          decal = -slideWidth * (nImage + 1) 
 	  	 elements.style.transform = `translateX(42px)`     
          elements.style.transition= "0s linear"
+         compteur = 0  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
          elements.style.transition= "1s linear" 
-         compteur = 0  
+          
       }else{ 
       	decal = -slideWidth * compteur
 	  	elements.style.transform = `translateX(${decal}px)`
