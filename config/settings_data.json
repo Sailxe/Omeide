@@ -175,7 +175,7 @@
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01"
         ],
         "settings": {
-          "transitionTime": "6000",
+          "transitionTime": "9000",
           "points": "#fd5757",
           "lePoint": "#99a1df"
         }
