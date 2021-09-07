@@ -125,14 +125,14 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Omeide-6.jpg",
-              "blackFiltre": 100
+              "blackFiltre": 88
             }
           },
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/IMG_4070.jpg",
-              "blackFiltre": 100
+              "blackFiltre": 60
             }
           }
         },
