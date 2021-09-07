@@ -455,9 +455,9 @@ main{
 	  console.log("test")
       compteur++ 
       if(compteur == nImage){ 
-         decal = -slideWidth * (nImage + 1) 
+         decal = -slideWidth * (nImage) 
 	  	 elements.style.transform = `translateX(${decal}px)`     
-         setTimeout(slideNextinfinit,1001)   
+         setTimeout(slideNextinfinit,1001)    
           
       }else{ 
       	decal = -slideWidth * compteur
