@@ -357,7 +357,13 @@ main{
         point.classList.add("point")
         point.innerHTML = "•"
         
-        point.addEventListener("click",choosePoint(i))
+        point.addEventListener("click",function(){
+        	compteur = i
+            let decal = -slideWidth * compteur
+            elements.style.transform = `translateX(${decal}px)`
+
+            pointColor()  
+        })
     }
     pointColor() 
 
@@ -428,12 +434,5 @@ main{
   
   }
 
-  function choosePoint(index){
-		compteur = index
-		let decal = -slideWidth * compteur
-	  	elements.style.transform = `translateX(${decal}px)`
-                           
-      	pointColor() 
-  }
  
 {% endjavascript %}
