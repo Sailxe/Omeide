@@ -11,11 +11,11 @@
                           <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
 
                       <div class="caption">
-                        <h2 class="titre">{{section.settings.heading}}</h2>
-                        <h3 class="sousText">{{section.settings.sousText}}</h3>
+                        <h2 class="titre">{{block.settings.heading}}</h2>
+                        <h3 class="sousText">{{block.settings.sousText}}</h3> 
 
-                        <a class="lienHomePage" href="{{section.settings.buttonLien}}">
-                          <div class="bouton"><p class="textBouton">{{section.settings.buttonText}}</p></div>
+                        <a class="lienHomePage" href="{{block.settings.buttonLien}}">
+                          <div class="bouton"><p class="textBouton">{{block.settings.buttonText}}</p></div>
                         </a>
                         
  							 
@@ -73,26 +73,7 @@
   {
     "name": "Diaporama",
     "settings": [
-					{
-						"type":"text",
-						"label":"titre",
-						"id":"heading"
-					},
-  					{
-						"type":"text",
-						"label":"sous-text",
-						"id":"sousText"
-					},
-  					{
-						"type":"text",
-						"label":"text-bouton",
-						"id":"buttonText"
-					},
-  					{
-						"type":"text",
-						"label":"lien-bouton",
-						"id":"buttonLien"
-					},
+					
   					{
 						"type":"text",
 						"label":"temp entre les transition (en ms)",
@@ -134,7 +115,27 @@
 									"step":1,
 									"unit":"%",
 									"default":100
-								}
+								},
+								{
+                                    "type":"text",
+                                    "label":"titre",
+                                    "id":"heading"
+                                },
+                                {
+                                    "type":"text",
+                                    "label":"sous-text",
+                                    "id":"sousText"
+                                },
+                                {
+                                    "type":"text",
+                                    "label":"text-bouton",
+                                    "id":"buttonText"
+                                },
+                                {
+                                    "type":"text",
+                                    "label":"lien-bouton",
+                                    "id":"buttonLien"
+                                }
 								]
 				}
 	],
