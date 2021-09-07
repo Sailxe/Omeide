@@ -456,7 +456,7 @@ main{
       compteur++
       compteur %= nImage 
       if(compteur == 0){ 
-         decal = -slideWidth * nImage
+         decal = -slideWidth * (nImage + 1) 
 	  	 elements.style.transform = `translateX(${decal}px)`    
          elements.style.transition= "0s linear"
          decal = -slideWidth * compteur
