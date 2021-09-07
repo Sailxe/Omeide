@@ -127,7 +127,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Omeide-3.jpg",
-              "blackFiltre": 71,
+              "blackFiltre": 70,
               "heading": "Le meilleur savon",
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
