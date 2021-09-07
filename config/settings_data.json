@@ -1,19 +1,35 @@
 {
   "current": {
-    "font_heading": "abril_fatface_n4",
+    "color_background": "#ffffff",
+    "color_secondary_background": "#ebf2ef",
+    "color_borders_and_lines": "#577b46",
+    "color_button": "#2d4f1e",
+    "color_headings_and_links": "#2d4f1e",
+    "color_body_text": "#537344",
+    "color_secondary_background_text": "#2d4f1e",
+    "color_sale_price": "#e84c37",
+    "color_field_text": "#2d4f1e",
+    "color_field_borders": "#2d4f1e",
+    "font_heading": "futura_n5",
+    "font_heading_base_size": 26,
+    "font_body": "karla_n4",
+    "edge_style": "sharp",
+    "favicon": "shopify:\/\/shop_images\/SOAPSHOW-LOGO-BLEU_9deeb9d2-2065-45fd-af59-f0c69568d2ee.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/SOAPSHOW-LOGO-BLEU_9deeb9d2-2065-45fd-af59-f0c69568d2ee.png",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/SOAPSHOW-LOGO-BLEU_9deeb9d2-2065-45fd-af59-f0c69568d2ee.png",
           "logo_max_width": 90,
-          "main_menu": "",
+          "main_menu": "main-menu",
           "enable_secondary_background": true,
           "show_search": false,
           "announcement_bar_enabled": true,
-          "announcement_bar_text": "Annoncez quelque chose ici",
+          "announcement_bar_text": "Omeide",
           "announcement_bar_url": "",
-          "announcement_bar_color_background": "#faf3ec",
-          "announcement_bar_color_text": "#000000"
+          "announcement_bar_color_background": "#ffffff",
+          "announcement_bar_color_text": "#0c435c"
         }
       },
       "featured-collections": {
