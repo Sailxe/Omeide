@@ -131,7 +131,9 @@
               "heading": "Le meilleur savon",
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
-              "buttonLien": "https:\/\/www.omeide-france.fr\/"
+              "buttonLien": "https:\/\/www.omeide-france.fr\/",
+              "droite-gauche": true,
+              "distance": 7
             }
           },
           "56036843-c410-4791-a384-2ac7352c4615": {
@@ -142,7 +144,9 @@
               "heading": "ICI c'est different",
               "sousText": "click et tu verra",
               "buttonText": "CLICK !!!",
-              "buttonLien": "https:\/\/www.google.fr\/"
+              "buttonLien": "https:\/\/www.google.fr\/",
+              "droite-gauche": false,
+              "distance": 20
             }
           },
           "c5baac6f-60d2-4f30-af87-910d8bfcb296": {
@@ -153,7 +157,9 @@
               "heading": "tous nos produits",
               "sousText": "nos coffrets",
               "buttonText": "colection",
-              "buttonLien": "https:\/\/www.omeide-france.fr\/collections\/nos-coffrets-en-precommandes"
+              "buttonLien": "https:\/\/www.omeide-france.fr\/collections\/nos-coffrets-en-precommandes",
+              "droite-gauche": false,
+              "distance": 64
             }
           },
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01": {
@@ -164,7 +170,9 @@
               "heading": "Le meilleur savon",
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
-              "buttonLien": "https:\/\/www.omeide-france.fr\/"
+              "buttonLien": "https:\/\/www.omeide-france.fr\/",
+              "droite-gauche": true,
+              "distance": 39
             }
           }
         },
