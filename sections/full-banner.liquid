@@ -327,7 +327,7 @@ main{
 	//variables
 	let compteur = 0
 	let timer, elements, slides, slideWidth   
-	const boitePoint = document.getElementById("petitPoint")  
+	const boitePoint = document.getElementById("petitPoint")
 
 	var time = document.getElementById("time").innerText; 
 	var color1 = document.getElementById("color1").innerText;
@@ -355,7 +355,9 @@ main{
     	boitePoint.appendChild(point)  
   		
         point.classList.add("point")
-        point.innerHTML = "•"    
+        point.innerHTML = "•"
+        
+        point.addEventListener("click",choosePoint(i))
     }
     pointColor() 
 
@@ -426,5 +428,12 @@ main{
   
   }
 
+  function choosePoint(index){
+		compteur = index
+		let decal = -slideWidth * compteur
+	  	elements.style.transform = `translateX(${decal}px)`
+                           
+      	pointColor() 
+  }
  
 {% endjavascript %}
