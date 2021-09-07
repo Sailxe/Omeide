@@ -471,6 +471,8 @@ main{
       compteur--
 	  if(compteur == -1){
 			compteur = nImage
+            elements.style.transition= "0s linear" 
+         	elements.style.transform = `translateX(${decal}px)` 
           	slidePrevInfinit() 
 		}
       let decal = -slideWidth * compteur
@@ -510,13 +512,12 @@ main{
         }
         
   function slidePrevInfinit(){
-         elements.style.transition= "0s linear" 
-         elements.style.transform = `translateX(${decal}px)`
+         
          elements.style.transition= "1s linear" 
          compteur--  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
-         setTimeout(function(){elements.style.transition= "1s linear"},100)
+
      	}
  
 {% endjavascript %}
