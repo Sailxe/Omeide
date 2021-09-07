@@ -358,8 +358,8 @@ main{
         point.innerHTML = "•"
         
                            
-        function selectPoint(index){
-    	compteur = index
+        function selectPoint(){
+    	compteur = i
         let decal = -slideWidth * compteur
         elements.style.transform = `translateX(${decal}px)`
 
@@ -367,7 +367,7 @@ main{
     	}		 
                           
         point.addEventListener("click",function(){
-              selectPoint(i) 
+              selectPoint()  
         })
                            
       
