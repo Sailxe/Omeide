@@ -527,11 +527,11 @@ main{
      	}
         
   function swap(){
-        
-        elements.addEventListener("mousedown",function(){
-			consol.log("click") 
-        })
-        
+        for(i=0;i<nImage;i++){
+          elements.addEventListener("mousedown",function(){
+              consol.log("click")  
+          })
+        }
         }
  
 {% endjavascript %}
