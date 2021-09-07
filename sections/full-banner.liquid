@@ -456,8 +456,8 @@ main{
       compteur++ 
       if(compteur == nImage){ 
          decal = -slideWidth * (nImage + 1) 
-	  	 elements.style.transform = `translateX(42px)`     
-         let a = setInterval(slideNextinfinit,1001) 
+	  	 elements.style.transform = `translateX(${decal}px)`     
+         setInterval(slideNextinfinit,1001)  
           
       }else{ 
       	decal = -slideWidth * compteur
