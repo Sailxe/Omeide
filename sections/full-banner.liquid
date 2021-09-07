@@ -527,8 +527,10 @@ main{
      	}
         
   function swap(){
+        var lesImages = document.getElementsByClassName("imageHomePage")
+        
         for(i=0;i<nImage;i++){
-          slides[i].addEventListener("mousedown",function(){
+          lesImages[i].addEventListener("mousedown",function(){ 
               consol.log("click")  
           })
         }
