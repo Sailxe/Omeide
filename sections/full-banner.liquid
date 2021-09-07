@@ -6,9 +6,9 @@
         {% assign premier = true %}
         {%for block in section.blocks %}
         		{% if premier == true%}
-                  <div class="element active">
+                  <div class="element active"> 
 
-                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
+                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}});"/>
 
                       <div class="caption">
                         
@@ -275,7 +275,7 @@ main{
 	
 	
 	width:100%;
-	filter: brightness(50%); 
+	
 	 
 }
 
