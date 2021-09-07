@@ -15,11 +15,11 @@
  
                       </div>
                     </div>
-            		{% assign premier = false %}
+            		{% assign premier = false %} 
             	{% elsif premier == false%}
                     <div class="element">
 
-                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}"/>
+                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
 
                         <div class="caption">
                           
