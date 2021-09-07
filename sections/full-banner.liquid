@@ -49,6 +49,26 @@
             	{% endif %}
           
         {%endfor%}
+                      
+             		<div class="element">
+
+                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
+
+              {% if blocks.settings.droite-gauche[0] == true %}
+               	<div class="caption" style="align-items:flex-end; right:{{blocks.settings.distance[0]}}%;">
+              {% else %}
+               <div class="caption" style="align-items:flex-start; left:{{blocks.settings.distance[0]}}%;">
+               {% endif %}
+                 <h2 class="titre">{{blocks.settings.heading[0]}}</h2>
+                 <h3 class="sousText">{{blocks.settings.sousText[0]}}</h3>  
+ 
+                 <a class="lienHomePage" href="{{block.settings.buttonLien[0]}}">
+                  <div class="bouton"><p class="textBouton">{{blocks.settings.buttonText[0]}}</p></div>
+                 </a>
+               
+
+               </div>
+            </div>
        </div>
     {% if section.settings.fleche %}
     <div id="nav-gauche" class="las la-chevron-left"><img id="image-gauche" src="{{section.settings.fleche | img_url:'50px'}}"></div>	
