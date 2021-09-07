@@ -466,16 +466,18 @@ main{
       pointColor()
   }
 
-  function slidePrev(){  
+  function slidePrev(){ 
+      let decal
 	  console.log("test") 
       compteur--
 	  if(compteur == -1){
 			compteur = nImage
-            elements.style.transition= "0s linear" 
+            elements.style.transition= "0s linear"
+            decal = -slideWidth * compteur 
          	elements.style.transform = `translateX(${decal}px)` 
           	setTimeout(slidePrevInfinit ,100)  
 		}
-      let decal = -slideWidth * compteur
+      decal = -slideWidth * compteur
 	  elements.style.transform = `translateX(${decal}px)`
 
 	  pointColor() 
