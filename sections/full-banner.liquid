@@ -496,7 +496,11 @@ main{
   function pointColor(){
 	var lesPoints = document.getElementsByClassName("point")
       for(i=0;i<nImage;i++){
-		if(i==compteur){
+        let pointColor = compteur
+        if (pointColor == nImage){
+        	pointColor = 0 
+        }
+		if(i==pointColor){
 			lesPoints[i].style.color = color2;    
 		}else{
 			lesPoints[i].style.color = color1;  
