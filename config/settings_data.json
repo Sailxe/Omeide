@@ -132,8 +132,8 @@
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
-              "droite-gauche": true,
-              "distance": 7
+              "droite-gauche": false,
+              "distance": 50
             }
           },
           "56036843-c410-4791-a384-2ac7352c4615": {
