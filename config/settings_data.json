@@ -110,25 +110,29 @@
           "da943aea-79e3-42bc-9c8e-43c2b3393ec3": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Omeide-3.jpg"
+              "image": "shopify:\/\/shop_images\/Omeide-3.jpg",
+              "blackFiltre": 71
             }
           },
           "56036843-c410-4791-a384-2ac7352c4615": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/pexels-tabitha-mort-773252.jpg"
+              "image": "shopify:\/\/shop_images\/pexels-tabitha-mort-773252.jpg",
+              "blackFiltre": 100
             }
           },
           "c5baac6f-60d2-4f30-af87-910d8bfcb296": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Omeide-6.jpg"
+              "image": "shopify:\/\/shop_images\/Omeide-6.jpg",
+              "blackFiltre": 100
             }
           },
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/IMG_4070.jpg"
+              "image": "shopify:\/\/shop_images\/IMG_4070.jpg",
+              "blackFiltre": 100
             }
           }
         },
