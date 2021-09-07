@@ -457,11 +457,7 @@ main{
       if(compteur == nImage){ 
          decal = -slideWidth * (nImage + 1) 
 	  	 elements.style.transform = `translateX(42px)`     
-         elements.style.transition= "0s linear"
-         compteur = 0  
-         decal = -slideWidth * compteur
-	  	 elements.style.transform = `translateX(${decal}px)`
-         elements.style.transition= "1s linear" 
+         let a = setInterval(slideNextinfinit,1001) 
           
       }else{ 
       	decal = -slideWidth * compteur
@@ -504,5 +500,12 @@ main{
   
   }
 
+  function slideNextinfinit(){
+        elements.style.transition= "0s linear"
+         compteur = 0  
+         decal = -slideWidth * compteur
+	  	 elements.style.transform = `translateX(${decal}px)`
+         elements.style.transition= "1s linear"
+        }
  
 {% endjavascript %}
