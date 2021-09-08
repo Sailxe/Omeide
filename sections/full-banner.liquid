@@ -28,7 +28,7 @@
                         
  							 
                       </div>
-                    </div>
+                    </div> 
             		{% assign premier = false %} 
                 {%endif%} 
          {% endfor %}
@@ -467,7 +467,7 @@ main{
 	let next = document.querySelector("#nav-droite")
 	let prev = document.querySelector("#nav-gauche")
 
-	nImage = slides.length -1; 
+	nImage = slides.length -2; 
 	
 	boitePoint.style.width = nImage*20 + "px"; 
 	
@@ -482,7 +482,7 @@ main{
         function selectPoint(index){
             point.addEventListener("click",function(){           
               compteur = index
-              let decal = -slideWidth * compteur
+              let decal = -slideWidth * (compteur + 1)
               elements.style.transform = `translateX(${decal}px)`
 
               pointColor()
@@ -527,7 +527,7 @@ main{
         compteur++ 
         if(compteur == nImage){ 
            decal = -slideWidth * (nImage)  
-           elements.style.transform = `translateX(${decal}px)`     
+           elements.style.transform = `translateX(${decal}px)`      
            setTimeout(slideNextinfinit,1001)    
 
         }else{ 
