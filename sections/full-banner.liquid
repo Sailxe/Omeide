@@ -600,10 +600,8 @@ main{
 
          
           
-         ele.addEventListener("mousedown",handleStart); 
-        
-        ele.addEventListener("mousemove",handleMove);
-                    
+        ele.addEventListener("mousedown",handleStart); 
+        ele.addEventListener("mousemove",handleMove);            
        	ele.addEventListener("mouseup",handleEnd); 
                       
                       
@@ -619,8 +617,11 @@ main{
             push = true
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
-                             
-			xStart = event.screenX
+            if(event.screenX == "undefined"){
+                xStart = touchItem.screenX
+            }else{  
+				xStart = event.screenX
+            }
             console.log(xStart)
                              
         }             
@@ -634,12 +635,21 @@ main{
             if(push == true){
              
               if(xStart - event.screenX < 0 && compteur == 0){ 
-
-                  decal = -slideWidth * nImage - (xStart - event.screenX)  
-                  decalage[0] = xStart - event.screenX  
+					if(event.screenX == "undefined"){
+                      decal = -slideWidth * nImage - (xStart - touchItem.screenX)
+                      decalage[0] = xStart - touchItem.screenX
+                    }else{
+                      
+                      decal = -slideWidth * nImage - (xStart - event.screenX)  
+                      decalage[0] = xStart - event.screenX 
+                    }
                    document.getElementById("console").innerHTML = decalage[0] 
               }else{
-                  decal = -slideWidth * compteur - (xStart - event.screenX)  
+                  if(event.screenX == "undefined"){
+                      decal = -slideWidth * compteur - (xStart - touchItem.screenX)
+                    }else{ 
+                  		decal = -slideWidth * compteur - (xStart - event.screenX)
+                    }
               }                 
               ele.style.transform = `translateX(${decal}px)` 
             }
