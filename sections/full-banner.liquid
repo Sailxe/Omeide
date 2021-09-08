@@ -573,16 +573,19 @@ main{
   }
         
   function swaper(){
-        ele = document.querySelector(".elements")
-         ele.addEventListener("mousedown",function(){  
+        let ele = document.querySelector(".elements")
+        let xStart,xEnd
+        
+                      
+         ele.addEventListener("mousedown",function(event){  
 			console.log("click")
         });
         
-        ele.addEventListener("mousemouve",function(){  
+        ele.addEventListener("mousemove",function(event){   
 			console.log("click")
         });
                       
-       	ele.addEventListener("mouseup",function(){  
+       	ele.addEventListener("mouseup",function(event){  
 			console.log("click") 
         });
   
