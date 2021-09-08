@@ -588,16 +588,18 @@ main{
                              
   }	
         let ele = document.querySelector(".elements")
+        let xStart
+        let push = false;
+        let decalage = [0] 
+                           
+                             
                              
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
         ele.addEventListener("touchmove", handleMove);        
 
-        let ele = document.querySelector(".elements")
-        let xStart
-        let push = false;
-        let decalage = [0]
-                             
+         
+          
          ele.addEventListener("mousedown",handleStart});
         
         ele.addEventListener("mousemove",handleMove);
