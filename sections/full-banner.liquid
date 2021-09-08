@@ -415,7 +415,6 @@ main{
 	//variables
 	let compteur = 0
     let spam = false
-                      
 	let timer, elements, slides, slideWidth   
     
 	const boitePoint = document.getElementById("petitPoint")
@@ -523,12 +522,12 @@ main{
               
               setTimeout(slidePrevInfinit ,1)   
           }
-        decal = -slideWidth * compteur
+        decal = -slideWidth * compteur 
         elements.style.transform = `translateX(${decal}px)`
 
         spam = true
         setTimeout(pointColor,500)   
-        setTimeout(noSpam,1000)  
+        setTimeout(noSpam,500)  
       }
       
   }
@@ -602,7 +601,7 @@ main{
          
           
         ele.addEventListener("mousedown",mouseStart); 
-        ele.addEventListener("mousemove",mouseMove);             
+        ele.addEventListener("mousemove",mouseMove);            
        	document.addEventListener("mouseup",mouseEnd); 
                       
                       
@@ -615,8 +614,6 @@ main{
                        
                    
          function mouseStart(event) {
-            if (spam == false){
-            spam = true
             ele.style.transform == 'none'
             push = true
             elements.style.transition= "all 0s ease-out"   
@@ -624,7 +621,6 @@ main{
                              
 			xStart = event.screenX
             console.log(xStart)
-            }
                              
         }             
            
@@ -660,8 +656,6 @@ main{
                   decalage[0] = xStart - event.screenX 
                                          
                                          
-                                         
-                   if(spam == false){
                       
                       console.log("test") 
                       compteur-- 
@@ -675,9 +669,9 @@ main{
                       decal = -slideWidth * compteur
                       elements.style.transform = `translateX(${decal}px)`
 
-                      spam = true
+                      
                       setTimeout(pointColor,500)   
-                      setTimeout(noSpam,1000)  
+                       
                     }
                   }else{
                   	 compteur = nImage -1
@@ -697,14 +691,12 @@ main{
             }
             setTimeout(function(){decalage[0] = 0},1000)  
            	console.log(xStart - event.screenX) 
-            setTimeout(noSpam,500) 
         }  
                       
                       
           //==================================//  
                       
         function handleStart(event) {
-            if(spam == false){
             ele.style.transform == 'none' 
             push = true
             elements.style.transition= "all 0s ease-out"   
@@ -712,8 +704,6 @@ main{
                              
 			xStart = event.touches[0].screenX
             console.log(xStart)
-            spam = true
-            }
                              
         }             
            
@@ -751,7 +741,7 @@ main{
                                          
                                          
                                          
-                   if(spam == false){
+                  
                       
                       console.log("test") 
                       compteur-- 
@@ -765,9 +755,8 @@ main{
                       decal = -slideWidth * compteur
                       elements.style.transform = `translateX(${decal}px)` 
 
-                      spam = true
+                    
                       setTimeout(pointColor,500)   
-                      setTimeout(noSpam,1000)  
                     }
                   }else{
                   	 compteur = nImage -1
@@ -786,8 +775,7 @@ main{
               }
             }
             setTimeout(function(){decalage[0] = 0},1000)  
-           	console.log(xEnd)
-            setTimeout(noSpam,500)  
+           	console.log(xEnd)    
         }             
    		
           
