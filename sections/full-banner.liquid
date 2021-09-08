@@ -632,7 +632,7 @@ main{
             	let decal = -slideWidth * compteur  
             	ele.style.transform = `translateX(${decal}px)` 
             }
-            decalage = 0 
+            setTimeout(function(){decalage = 0},1000)  
            	console.log(xStart - event.screenX) 
         });
   
