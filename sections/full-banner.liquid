@@ -1,6 +1,6 @@
 
 <main>
-  <div id="visuel"> </div>
+  <div id="console"> </div>
   <div class="diapo">
       <div class="elements">
         {% assign premier = true %}
@@ -585,7 +585,6 @@ main{
   function swaper(){
         let ele = document.querySelector(".elements")
         let xStart
-        let test = document.getElementById("visuel")
         let push = false;
                       
          ele.addEventListener("mousedown",function(event){
@@ -600,7 +599,7 @@ main{
             let decal = -slideWidth * compteur - (xStart - event.screenX)  
             ele.style.transform = `translateX(${decal}px)` 
                               
-			test.innerHTML = event.screenX 
+		
             }
         });
                        
@@ -611,6 +610,9 @@ main{
               	slidePrev()
             }else if(xStart - event.screenX > 200){ 
                 slideNext()       
+            }else{
+            	let decal = -slideWidth * compteur  
+            	ele.style.transform = `translateX(${decal}px)` 
             }
            	console.log(xStart - event.screenX) 
         });
