@@ -1,6 +1,6 @@
 
 <main>
-  
+  <div id="visuel"> </div>
   <div class="diapo">
       <div class="elements">
         {% assign premier = true %}
@@ -574,15 +574,15 @@ main{
         
   function swaper(){
         let ele = document.querySelector(".elements")
-        let xStart,xEnd
-        
+        let xStart,xEnd 
+        let test = document.getElementById("visuel")
                       
          ele.addEventListener("mousedown",function(event){  
 			console.log("click")
         });
         
         ele.addEventListener("mousemove",function(event){   
-			console.log("click")
+			
         });
                       
        	ele.addEventListener("mouseup",function(event){  
