@@ -588,7 +588,7 @@ main{
                              
   }	
         let ele = document.querySelector(".elements")
-        let xStart
+        let xStart,xEnd
         let push = false;
         let decalage = [0] 
                            
@@ -639,7 +639,7 @@ main{
               }else{
                   decal = -slideWidth * compteur - (xStart - event.screenX)  
               }                 
-              ele.style.transform = `translateX(${decal}px)` 
+              ele.style.transform = `translateX(${decal}px)`
             }
         }
                        
@@ -722,7 +722,8 @@ main{
               }else{
                   decal = -slideWidth * compteur - (xStart - event.touches[0].screenX)  
               }                 
-              ele.style.transform = `translateX(${decal}px)`  
+              ele.style.transform = `translateX(${decal}px)` 
+              xEnd = event.touches[0].screenX
             }
         }
                         
