@@ -587,9 +587,11 @@ main{
        img[i].setAttribute('draggable', false);  
                              
   }
+        let ele = document.querySelector(".elements") 
+                             
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
-        ele.addEventListener("touchmove", handleMove);         
+        ele.addEventListener("touchmove", handleMove);        
 
         
         let xStart
@@ -637,7 +639,7 @@ main{
                                          
                                          
                    if(spam == false){
-                       
+                      
                       console.log("test") 
                       compteur-- 
                       if(compteur == -1){ 
