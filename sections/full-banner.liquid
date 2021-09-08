@@ -614,7 +614,7 @@ main{
                        
                    
          function mouseStart(event) {
-            ele.style.animationPlayState == 'paused'
+            ele.style.transform == 'none'
             push = true
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
@@ -645,7 +645,7 @@ main{
         }
                        
        	function mouseEnd(event) { 
-            ele.style.animationPlayState == 'running' 
+            
             push = false 
             elements.style.transition= "all 1s ease-out" 
             startTimer()
@@ -699,7 +699,7 @@ main{
           //==================================//  
                       
         function handleStart(event) {
-            ele.style.animationPlayState == 'paused'
+            ele.style.transform == 'none' 
             push = true
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
@@ -731,7 +731,7 @@ main{
         }
                         
        	function handleEnd(event) { 
-            ele.style.animationPlayState == 'running'
+            
             push = false 
             elements.style.transition= "all 1s ease-out" 
             startTimer()
