@@ -469,10 +469,10 @@ main{
   function slidePrev(){ 
       let decal
 	  console.log("test") 
-      compteur--
+      compteur-- 
 	  if(compteur == -1){
 			compteur = nImage
-            elements.style.transition= "0s linear"
+            elements.style.transition= "all 0s ease-out"
             decal = -slideWidth * compteur 
          	elements.style.transform = `translateX(${decal}px)` 
           	setTimeout(slidePrevInfinit ,1)   
@@ -510,7 +510,7 @@ main{
   }
 
   function slideNextinfinit(){
-        elements.style.transition= "0s linear" 
+        elements.style.transition= "all 0s ease-out" 
          compteur = 0  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
@@ -519,7 +519,7 @@ main{
         
   function slidePrevInfinit(){
          
-         elements.style.transition= "1s linear" 
+         elements.style.transition= "all 1s ease-out" 
          compteur--  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
