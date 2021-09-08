@@ -640,7 +640,7 @@ main{
                     if(compteur == -1){
                           compteur = nImage
                           elements.style.transition= "all 0s ease-out"
-                          decal = -slideWidth * compteur + (xStart - event.screenX)  
+                          decal = -slideWidth * compteur - (xStart - event.screenX)  
                           elements.style.transform = `translateX(${decal}px)` 
 
                           setTimeout(slidePrevInfinit ,1)   
