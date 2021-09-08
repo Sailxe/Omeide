@@ -400,6 +400,7 @@ main{
 	
 	//variables
 	let compteur = 0
+    let spam = false
 	let timer, elements, slides, slideWidth   
 	const boitePoint = document.getElementById("petitPoint")
 
@@ -473,37 +474,45 @@ main{
 	}
 
 	
-  function slideNext(){  
-      let decal
-	  console.log("test")
-      compteur++ 
-      if(compteur == nImage){ 
-         decal = -slideWidth * (nImage)  
-	  	 elements.style.transform = `translateX(${decal}px)`     
-         setTimeout(slideNextinfinit,1001)    
-           
-      }else{ 
-      	decal = -slideWidth * compteur
-	  	elements.style.transform = `translateX(${decal}px)`
-      }           
-      setTimeout(pointColor,500)  
+  function slideNext(){
+      if(spam == false){
+        let decal
+        console.log("test")
+        compteur++ 
+        if(compteur == nImage){ 
+           decal = -slideWidth * (nImage)  
+           elements.style.transform = `translateX(${decal}px)`     
+           setTimeout(slideNextinfinit,1001)    
+
+        }else{ 
+          decal = -slideWidth * compteur
+          elements.style.transform = `translateX(${decal}px)`
+        }        
+        spam = true
+        setTimeout(pointColor,500)  
+        setTimeout(noSpam,500)
+      }
   }
 
   function slidePrev(){ 
-      let decal
-	  console.log("test") 
-      compteur-- 
-	  if(compteur == -1){
-			compteur = nImage
-            elements.style.transition= "all 0s ease-out"
-            decal = -slideWidth * compteur 
-         	elements.style.transform = `translateX(${decal}px)` 
-          	setTimeout(slidePrevInfinit ,1)   
-		}
-      decal = -slideWidth * compteur
-	  elements.style.transform = `translateX(${decal}px)`
+      if(spam == false){
+        let decal 
+        console.log("test") 
+        compteur-- 
+        if(compteur == -1){
+              compteur = nImage
+              elements.style.transition= "all 0s ease-out"
+              decal = -slideWidth * compteur 
+              elements.style.transform = `translateX(${decal}px)` 
+              setTimeout(slidePrevInfinit ,1)   
+          }
+        decal = -slideWidth * compteur
+        elements.style.transform = `translateX(${decal}px)`
 
-	  setTimeout(pointColor,500)   
+        spam = true
+        setTimeout(pointColor,500)   
+        setTimeout(noSpam,500)
+      }
       
   }
 
@@ -548,6 +557,10 @@ main{
 	  	 elements.style.transform = `translateX(${decal}px)`
 
      	}
+                      
+  function noSpam(){
+  	spam = false
+  }
         
   function swaper(){
         ele = document.querySelector(".elements")
