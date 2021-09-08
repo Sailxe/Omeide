@@ -584,19 +584,22 @@ main{
                       
   function swaper(){
         let ele = document.querySelector(".elements")
-        let xStart,xEnd 
+        let xStart
         let test = document.getElementById("visuel")
                       
-         ele.addEventListener("mousedown",function(event){  
+         ele.addEventListener("mousedown",function(event){
+            elements.style.transition= "all 0s ease-out" 
 			xStart = event.screenX
             console.log(xStart)
         });
         
-        ele.addEventListener("mousemove",function(event){   
+        ele.addEventListener("mousemove",function(event){
+            let decal = -slideWidth * compteur + (xStart - event.screenX)
 			test.innerHTML = event.screenX  
         });
-                      
+                       
        	ele.addEventListener("mouseup",function(event){  
+            elements.style.transition= "all 1s ease-out" 
 			if(xStart - event.screenX < -200){   
               	slidePrev()
             }else if(xStart - event.screenX > 200){ 
