@@ -416,6 +416,7 @@ main{
 	let compteur = 0
     let spam = false
 	let timer, elements, slides, slideWidth   
+    let decalage = 0
 	const boitePoint = document.getElementById("petitPoint")
 
 	var time = document.getElementById("time").innerText; 
@@ -516,8 +517,9 @@ main{
         if(compteur == -1){
               compteur = nImage
               elements.style.transition= "all 0s ease-out"
-              decal = -slideWidth * compteur 
+              decal = -slideWidth * compteur + decalage 
               elements.style.transform = `translateX(${decal}px)` 
+              
               setTimeout(slidePrevInfinit ,1)   
           }
         decal = -slideWidth * compteur
@@ -630,6 +632,7 @@ main{
             	let decal = -slideWidth * compteur  
             	ele.style.transform = `translateX(${decal}px)` 
             }
+            decalage = 0 
            	console.log(xStart - event.screenX) 
         });
   
