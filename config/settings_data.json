@@ -133,6 +133,7 @@
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
               "droite-gauche": false,
+              "list_size": "centre",
               "distance": 50
             }
           },
@@ -146,6 +147,7 @@
               "buttonText": "CLICK !!!",
               "buttonLien": "https:\/\/www.google.fr\/",
               "droite-gauche": false,
+              "list_size": "droite",
               "distance": 20
             }
           },
@@ -159,6 +161,7 @@
               "buttonText": "colection",
               "buttonLien": "https:\/\/www.omeide-france.fr\/collections\/nos-coffrets-en-precommandes",
               "droite-gauche": false,
+              "list_size": "droite",
               "distance": 64
             }
           },
@@ -172,6 +175,7 @@
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
               "droite-gauche": true,
+              "list_size": "droite",
               "distance": 37
             }
           }
