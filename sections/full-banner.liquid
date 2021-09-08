@@ -586,21 +586,26 @@ main{
         let ele = document.querySelector(".elements")
         let xStart
         let test = document.getElementById("visuel")
+        let push = false;
                       
          ele.addEventListener("mousedown",function(event){
+            push = true
             elements.style.transition= "all 0s ease-out" 
 			xStart = event.screenX
             console.log(xStart)
         });
         
         ele.addEventListener("mousemove",function(event){
+            if(push == true){
             let decal = -slideWidth * compteur - (xStart - event.screenX)  
             ele.style.transform = `translateX(${decal}px)` 
                               
-			test.innerHTML = event.screenX  
+			test.innerHTML = event.screenX 
+            }
         });
                        
-       	ele.addEventListener("mouseup",function(event){  
+       	ele.addEventListener("mouseup",function(event){ 
+            push = false 
             elements.style.transition= "all 1s ease-out" 
 			if(xStart - event.screenX < -200){   
               	slidePrev()
