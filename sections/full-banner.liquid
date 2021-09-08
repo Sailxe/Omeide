@@ -614,6 +614,7 @@ main{
                        
                    
          function handleStart(event) {
+            console.log(touchItem.screenX)  
             push = true
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
@@ -629,7 +630,7 @@ main{
         
 
 		function handleMove(event) {
-            console.log(touchItem.screenX) 
+             
           	let decal 
             
             if(push == true){
