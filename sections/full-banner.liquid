@@ -614,6 +614,7 @@ main{
                        
                    
          function mouseStart(event) {
+            if(spam == false){
             ele.style.transform == 'none'
             push = true
             elements.style.transition= "all 0s ease-out"   
@@ -621,13 +622,14 @@ main{
                              
 			xStart = event.screenX
             console.log(xStart)
+            }
                              
         }             
            
         
 
 		function mouseMove(event) {
-            
+            if(spam == false){
           	let decal 
             
             if(push == true){
@@ -642,10 +644,11 @@ main{
               }                 
               ele.style.transform = `translateX(${decal}px)`
             }
+            }
         }
                        
        	function mouseEnd(event) { 
-            
+            if(spam == false){
             push = false 
             elements.style.transition= "all 0.5s ease-out" 
             startTimer()
@@ -693,6 +696,7 @@ main{
             }
             setTimeout(function(){decalage[0] = 0},1000)  
            	console.log(xStart - event.screenX) 
+            } 
         }  
                       
                       
