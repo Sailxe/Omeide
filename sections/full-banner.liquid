@@ -608,8 +608,8 @@ main{
           	let decal 
             
             if(push == true){
-            
-              if(event.screenX < 0 && compteur == 0){ 
+             
+              if(xStart - event.screenX < 0 && compteur == 0){ 
 
                   decal = -slideWidth * nImage - (xStart - event.screenX)   
               }else{
