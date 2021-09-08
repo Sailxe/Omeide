@@ -596,13 +596,13 @@ main{
                              
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
-        ele.addEventListener("touchmove", handleMove);        
+        document.queriselector("body").addEventListener("touchmove", handleMove);         
 
          
           
         ele.addEventListener("mousedown",mouseStart); 
         ele.addEventListener("mousemove",mouseMove);            
-       	ele.addEventListener("mouseup",mouseEnd); 
+       	document.queriselector("body").addEventListener("mouseup",mouseEnd); 
                       
                       
    //========================telephone tactile ================================
