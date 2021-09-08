@@ -730,11 +730,11 @@ main{
             push = false 
             elements.style.transition= "all 1s ease-out" 
             startTimer()
-            if(xStart - event.screenX < 0 && compteur == 0){ 
+            if(xStart - event.touches[0].screenX < 0 && compteur == 0){ 
                                          
-		 		if(xStart - event.screenX < -150){
-                  decal = -slideWidth * nImage - (xStart - event.screenX)  
-                  decalage[0] = xStart - event.screenX 
+		 		if(xStart - event.touches[0].screenX < -150){
+                  decal = -slideWidth * nImage - (xStart - event.touches[0].screenX)  
+                  decalage[0] = xStart - event.touches[0].screenX 
                                          
                                          
                                          
@@ -763,9 +763,9 @@ main{
                   } 
                                            
             }else{  
-              if(xStart - event.screenX < -150){   
+              if(xStart - event.touches[0].screenX < -150){   
                   slidePrev()
-              }else if(xStart - event.screenX > 150){ 
+              }else if(xStart - event.touches[0].screenX > 150){ 
                   slideNext()       
               }else{
                   let decal = -slideWidth * compteur  
@@ -773,8 +773,8 @@ main{
               }
             }
             setTimeout(function(){decalage[0] = 0},1000)  
-           	console.log(xStart - event.screenX) 
-        }             
+           	console.log(xStart - event.touches[0].screenX) 
+        }              
    		
           
   
