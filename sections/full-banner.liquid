@@ -571,7 +571,17 @@ main{
   function noSpam(){
   	spam = false
   }
-        
+      
+//============================================================
+                      
+  let img = document.querySelector(".image")          
+  
+  for(i=0;i<img.length;i++){
+                    
+       document.getElementById('myImage').setAttribute('draggable', false);
+                             
+  }
+                      
   function swaper(){
         let ele = document.querySelector(".elements")
         let xStart,xEnd 
