@@ -505,7 +505,7 @@ main{
         }        
         spam = true
         setTimeout(pointColor,500)  
-        setTimeout(noSpam,500) 
+        setTimeout(noSpam,1000) 
       }
   }
  
@@ -522,12 +522,12 @@ main{
               
               setTimeout(slidePrevInfinit ,1)   
           }
-        decal = -slideWidth * compteur 
+        decal = -slideWidth * compteur
         elements.style.transform = `translateX(${decal}px)`
 
         spam = true
         setTimeout(pointColor,500)   
-        setTimeout(noSpam,500)  
+        setTimeout(noSpam,1000)  
       }
       
   }
@@ -601,7 +601,7 @@ main{
          
           
         ele.addEventListener("mousedown",mouseStart); 
-        ele.addEventListener("mousemove",mouseMove);            
+        ele.addEventListener("mousemove",mouseMove);             
        	document.addEventListener("mouseup",mouseEnd); 
                       
                       
@@ -656,6 +656,8 @@ main{
                   decalage[0] = xStart - event.screenX 
                                          
                                          
+                                         
+                   if(spam == false){
                       
                       console.log("test") 
                       compteur-- 
@@ -669,9 +671,9 @@ main{
                       decal = -slideWidth * compteur
                       elements.style.transform = `translateX(${decal}px)`
 
-                      
+                      spam = true
                       setTimeout(pointColor,500)   
-                       
+                      setTimeout(noSpam,1000)  
                     }
                   }else{
                   	 compteur = nImage -1
@@ -741,7 +743,7 @@ main{
                                          
                                          
                                          
-                  
+                   if(spam == false){
                       
                       console.log("test") 
                       compteur-- 
@@ -755,8 +757,9 @@ main{
                       decal = -slideWidth * compteur
                       elements.style.transform = `translateX(${decal}px)` 
 
-                    
+                      spam = true
                       setTimeout(pointColor,500)   
+                      setTimeout(noSpam,1000)  
                     }
                   }else{
                   	 compteur = nImage -1
