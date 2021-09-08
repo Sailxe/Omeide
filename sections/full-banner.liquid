@@ -549,10 +549,8 @@ main{
               decal = -slideWidth * compteur 
               elements.style.transform = `translateX(${decal}px)`  
               compteur = nImage + 1 
-              elements.style.transition= "all 0s ease-out"
-              decal = -slideWidth * compteur 
-              elements.style.transform = `translateX(${decal}px)` 
-              setTimeout(slidePrevInfinit ,1)   
+              
+              setTimeout(slidePrevInfinit ,1000)    
           }
         decal = -slideWidth * compteur
         elements.style.transform = `translateX(${decal}px)`
@@ -599,10 +597,10 @@ main{
         
   function slidePrevInfinit(){
          
-         elements.style.transition= "all 1s ease-out" 
-         compteur--  
-         decal = -slideWidth * compteur
-	  	 elements.style.transform = `translateX(${decal}px)`
+         compteur = nImage + 1 
+         elements.style.transition= "all 0s ease-out"
+         decal = -slideWidth * compteur 
+         elements.style.transform = `translateX(${decal}px)` 
 
      	}
                       
