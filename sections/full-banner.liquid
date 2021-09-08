@@ -578,7 +578,7 @@ main{
         let test = document.getElementById("visuel")
                       
          ele.addEventListener("mousedown",function(event){  
-			console.log("click")
+			xStart = event.screenX
         });
         
         ele.addEventListener("mousemove",function(event){   
@@ -586,7 +586,11 @@ main{
         });
                       
        	ele.addEventListener("mouseup",function(event){  
-			console.log("click") 
+			if(xStart - event.screenX < 0){
+            	slideNext() 
+            }else if(xStart - event;screenX > 0){
+              	slidePrev()       
+            }
         });
   
         }
