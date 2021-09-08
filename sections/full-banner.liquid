@@ -597,9 +597,9 @@ main{
         });
                       
        	ele.addEventListener("mouseup",function(event){  
-			if(xStart - event.screenX < -100){  
+			if(xStart - event.screenX < -200){   
               	slidePrev()
-            }else if(xStart - event.screenX > 100){ 
+            }else if(xStart - event.screenX > 200){ 
                 slideNext()       
             }
            	console.log(xStart - event.screenX) 
