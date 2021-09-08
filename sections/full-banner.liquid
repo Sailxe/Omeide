@@ -603,10 +603,14 @@ main{
         
         ele.addEventListener("mousemove",function(event){
             if(push == true){
-            let decal = -slideWidth * compteur - (xStart - event.screenX)  
-            ele.style.transform = `translateX(${decal}px)` 
-                               
-		
+            
+            if(event.screenX < 0 && compteur == 0){
+                      
+                      let decal = -slideWidth * nImage - (xStart - event.screenX)   
+            }else{
+            	let decal = -slideWidth * compteur - (xStart - event.screenX)  
+            }                 
+			ele.style.transform = `translateX(${decal}px)` 
             }
         });
                        
