@@ -723,7 +723,7 @@ main{
                   decal = -slideWidth * compteur - (xStart - event.touches[0].screenX)  
               }                 
               ele.style.transform = `translateX(${decal}px)` 
-              xEnd = event.touches[0].screenX
+              xEnd = xStart - event.touches[0].screenX 
             }
         }
                         
