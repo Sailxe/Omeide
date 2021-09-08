@@ -626,14 +626,42 @@ main{
             push = false 
             elements.style.transition= "all 1s ease-out" 
             startTimer()
-                             
-			if(xStart - event.screenX < -200){   
-              	slidePrev()
-            }else if(xStart - event.screenX > 200){ 
-                slideNext()       
-            }else{
-            	let decal = -slideWidth * compteur  
-            	ele.style.transform = `translateX(${decal}px)` 
+            if(xStart - event.screenX < 0 && compteur == 0){ 
+
+                  decal = -slideWidth * nImage - (xStart - event.screenX)  
+                  decalage[0] = xStart - event.screenX 
+                                         
+                                         
+                                         
+                 if(spam == false){
+                    let decal 
+                    console.log("test") 
+                    compteur-- 
+                    if(compteur == -1){
+                          compteur = nImage
+                          elements.style.transition= "all 0s ease-out"
+                          decal = -slideWidth * compteur + decalage[0]  
+                          elements.style.transform = `translateX(${decal}px)` 
+
+                          setTimeout(slidePrevInfinit ,1)   
+                      }
+                    decal = -slideWidth * compteur
+                    elements.style.transform = `translateX(${decal}px)`
+
+                    spam = true
+                    setTimeout(pointColor,500)   
+                    setTimeout(noSpam,1000)  
+                  }
+                                           
+            }else{  
+              if(xStart - event.screenX < -200){   
+                  slidePrev()
+              }else if(xStart - event.screenX > 200){ 
+                  slideNext()       
+              }else{
+                  let decal = -slideWidth * compteur  
+                  ele.style.transform = `translateX(${decal}px)` 
+              }
             }
             setTimeout(function(){decalage[0] = 0},1000)  
            	console.log(xStart - event.screenX) 
