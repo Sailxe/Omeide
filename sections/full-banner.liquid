@@ -590,8 +590,11 @@ main{
          ele.addEventListener("mousedown",function(event){
             push = true
             elements.style.transition= "all 0s ease-out" 
+            stopTimer()
+                             
 			xStart = event.screenX
             console.log(xStart)
+                             
         });
         
         ele.addEventListener("mousemove",function(event){
@@ -606,6 +609,8 @@ main{
        	ele.addEventListener("mouseup",function(event){ 
             push = false 
             elements.style.transition= "all 1s ease-out" 
+            startTimer()
+                             
 			if(xStart - event.screenX < -200){   
               	slidePrev()
             }else if(xStart - event.screenX > 200){ 
