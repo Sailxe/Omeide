@@ -614,7 +614,7 @@ main{
 
                   decal = -slideWidth * nImage - (xStart - event.screenX)  
                   decalage[0] = xStart - event.screenX  
-                   
+                   document.getElementById("console").innerHTML = decalage[0] 
               }else{
                   decal = -slideWidth * compteur - (xStart - event.screenX)  
               }                 
@@ -668,5 +668,5 @@ main{
         });
   		
           
- document.getElementById("console").innerHTML = decalage[0]  
+  
 {% endjavascript %}
