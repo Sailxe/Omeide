@@ -8,7 +8,7 @@
         		{% if premier == true%}
                   	<div class="element active"> 
 
-                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
+                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
                       
                       {% if block.settings.centre == "droite" %}
                       <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;"> 
@@ -31,7 +31,7 @@
             	{% elsif premier == false%}
                     <div class="element">
  
-                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
+                            <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
 
                         {% if block.settings.centre == "droite" %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
@@ -49,7 +49,7 @@
                
 
                         </div>
-                      </div>
+                      </div> 
             	{% endif %}
           
         {%endfor%}
@@ -58,7 +58,7 @@
         		{% if premier == true%}
                   	<div class="element active"> 
 
-                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
+                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
                       
                       	{% if block.settings.centre == "droite" %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
