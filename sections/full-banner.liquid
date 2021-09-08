@@ -675,15 +675,15 @@ main{
                       
    //========================telephone tactile ================================
                       
-      function startup() {
-          var el = document.getElementsByTagName("canvas")[0];
-          el.addEventListener("touchstart", handleStart, false);
-          el.addEventListener("touchend", handleEnd, false);
-          el.addEventListener("touchcancel", handleCancel, false);
-          el.addEventListener("touchleave", handleLeave, false);
-          el.addEventListener("touchmove", handleMove, false);
-        }
-                      
+      
+         
+          ele.addEventListener("touchstart", handleStart, false);
+          ele.addEventListener("touchend", handleEnd, false);
+          ele.addEventListener("touchcancel", handleCancel, false);
+          ele.addEventListener("touchleave", handleLeave, false);
+          ele.addEventListener("touchmove", handleMove, false);
+        
+                       
    /*                   
          function handleStart(event) {
             push = true
