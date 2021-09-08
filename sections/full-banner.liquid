@@ -598,84 +598,12 @@ main{
         let push = false;
         let decalage = [0]
                              
-         ele.addEventListener("mousedown",function(event){
-            push = true
-            elements.style.transition= "all 0s ease-out" 
-            stopTimer()
-                             
-			xStart = event.screenX
-            console.log(xStart)
-                             
-        });
+         ele.addEventListener("mousedown",handleStart);
         
-        ele.addEventListener("mousemove",function(event){
-            
-          	let decal 
-            
-            if(push == true){
-             
-              if(xStart - event.screenX < 0 && compteur == 0){ 
-
-                  decal = -slideWidth * nImage - (xStart - event.screenX)  
-                  decalage[0] = xStart - event.screenX  
-                   document.getElementById("console").innerHTML = decalage[0] 
-              }else{
-                  decal = -slideWidth * compteur - (xStart - event.screenX)  
-              }                 
-              ele.style.transform = `translateX(${decal}px)` 
-            }
-        });
+        ele.addEventListener("mousemove",handleEnd);
                        
-       	ele.addEventListener("mouseup",function(event){ 
-            push = false 
-            elements.style.transition= "all 1s ease-out" 
-            startTimer()
-            if(xStart - event.screenX < 0 && compteur == 0){ 
-                                         
-		 		if(xStart - event.screenX < -150){
-                  decal = -slideWidth * nImage - (xStart - event.screenX)  
-                  decalage[0] = xStart - event.screenX 
-                                         
-                                         
-                                         
-                   if(spam == false){
-                      
-                      console.log("test") 
-                      compteur-- 
-                      if(compteur == -1){ 
-                            compteur = nImage
-                            elements.style.transition= "all 1s ease-out" 
-                             compteur--  
-                             decal = -slideWidth * compteur
-
-                        }
-                      decal = -slideWidth * compteur
-                      elements.style.transform = `translateX(${decal}px)`
-
-                      spam = true
-                      setTimeout(pointColor,500)   
-                      setTimeout(noSpam,1000)  
-                    }
-                  }else{
-                  	 compteur = nImage -1
-                      
-                      slideNext() 
-                  } 
-                                           
-            }else{  
-              if(xStart - event.screenX < -150){   
-                  slidePrev()
-              }else if(xStart - event.screenX > 150){ 
-                  slideNext()       
-              }else{
-                  let decal = -slideWidth * compteur  
-                  ele.style.transform = `translateX(${decal}px)` 
-              }
-            }
-            setTimeout(function(){decalage[0] = 0},1000)  
-           	console.log(xStart - event.screenX) 
-        });
-                      
+       	ele.addEventListener("mouseup",handleMove);
+                       
                       
    //========================telephone tactile ================================
                       
