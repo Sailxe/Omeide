@@ -587,7 +587,9 @@ main{
        img[i].setAttribute('draggable', false);  
                              
   }
-                      
+        ele.addEventListener("touchstart", handleStart);
+        ele.addEventListener("touchend", handleEnd);
+        ele.addEventListener("touchmove", handleMove);         
 
         let ele = document.querySelector(".elements")
         let xStart
@@ -677,9 +679,7 @@ main{
                       
       
          
-          ele.addEventListener("touchstart", handleStart);
-          ele.addEventListener("touchend", handleEnd);
-          ele.addEventListener("touchmove", handleMove); 
+           
         
                        
                    
