@@ -595,7 +595,7 @@ main{
         
         ele.addEventListener("mousemove",function(event){
             let decal = -slideWidth * compteur + (xStart - event.screenX)
-            elements.style.transform = `translateX(${decal}px)`
+            ele.style.transform = `translateX(${decal}px)` 
                               
 			test.innerHTML = event.screenX  
         });
