@@ -5,9 +5,33 @@
       <div class="elements">
         
         
-        
-                  	
-            		
+        {% assign premier = true %}
+        {%for block in section.blocks %}
+        		{% if premier == true%}
+                  	<div class="element active"> 
+
+                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
+                      
+                      	{% if block.settings.centre == "droite" %}
+                        <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
+                        {% elsif block.settings.centre == "gauche" %}
+                        <div class="caption" style="align-items:flex-start; left:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;"> 
+                        {% else %}
+                          <div class="caption" style="align-items:centre; left:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">  
+                        {% endif %}    
+                        <h2 class="titre">{{block.settings.heading}}</h2>
+                        <h3 class="sousText">{{block.settings.sousText}}</h3> 
+
+                        <a class="lienHomePage" href="{{block.settings.buttonLien}}">
+                          <div class="bouton"><p class="textBouton">{{block.settings.buttonText}}</p></div>
+                        </a>
+                        
+ 							 
+                      </div>
+                    </div>
+            		{% assign premier = false %} 
+                {%endif%} 
+         {% endfor %}
                           
                           
                           
