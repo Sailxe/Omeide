@@ -643,6 +643,9 @@ main{
                           compteur = nImage
                           elements.style.transition= "all 0s ease-out"
                           decal = -slideWidth * compteur - 4200  
+                          console.log(decal)
+                          console.log(-slideWidth*compteur)
+                          console.log("ici") 
                           elements.style.transform = `translateX(${decal}px)` 
 
                           setTimeout(slidePrevInfinit ,1)   
