@@ -628,7 +628,7 @@ main{
             startTimer()
             if(xStart - event.screenX < 0 && compteur == 0){ 
                                          
-		 		if(xStart - event.screenX < -200){
+		 		if(xStart - event.screenX < -150){
                   decal = -slideWidth * nImage - (xStart - event.screenX)  
                   decalage[0] = xStart - event.screenX 
                                          
@@ -656,12 +656,12 @@ main{
                   	 compteur = nImage -1
                       
                       slideNext() 
-                  }
+                  } 
                                            
             }else{  
-              if(xStart - event.screenX < -200){   
+              if(xStart - event.screenX < -150){   
                   slidePrev()
-              }else if(xStart - event.screenX > 200){ 
+              }else if(xStart - event.screenX > 150){ 
                   slideNext()       
               }else{
                   let decal = -slideWidth * compteur  
