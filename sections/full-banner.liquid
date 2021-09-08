@@ -592,7 +592,7 @@ main{
         let push = false;
         let decalage = [0] 
                            
-        ele.addEventListener('touchstart', function(e) {
+        /*ele.addEventListener('touchstart', function(e) {
         // Iterate through the touch points and log each screenX/Y coordinate.
         // The unit of each coordinate is CSS pixels.
         var i;
@@ -600,7 +600,7 @@ main{
           console.log("touchpoint[" + i + "].screenX = " + e.touches[i].screenX);
           console.log("touchpoint[" + i + "].screenY = " + e.touches[i].screenY);
         }
-        }, false);                     
+        }, false);  */                   
                               
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
@@ -627,7 +627,7 @@ main{
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
             if(event.screenX == "undefined"){
-                xStart = touchItem.screenX
+                xStart = e.touches[i].screenX
             }else{  
 				xStart = event.screenX
             }
@@ -636,7 +636,7 @@ main{
         }             
            
         
-
+ 
 		function handleMove(event) {
              
           	let decal  
