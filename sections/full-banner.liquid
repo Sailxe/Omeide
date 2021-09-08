@@ -602,15 +602,18 @@ main{
         });
         
         ele.addEventListener("mousemove",function(event){
+            
+          	let decal 
+            
             if(push == true){
             
-            if(event.screenX < 0 && compteur == 0){
-                      
-                      let decal = -slideWidth * nImage - (xStart - event.screenX)   
-            }else{
-            	let decal = -slideWidth * compteur - (xStart - event.screenX)  
-            }                 
-			ele.style.transform = `translateX(${decal}px)` 
+              if(event.screenX < 0 && compteur == 0){ 
+
+                  decal = -slideWidth * nImage - (xStart - event.screenX)   
+              }else{
+                  decal = -slideWidth * compteur - (xStart - event.screenX)  
+              }                 
+              ele.style.transform = `translateX(${decal}px)` 
             }
         });
                        
