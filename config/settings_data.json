@@ -133,7 +133,7 @@
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
               "droite-gauche": false,
-              "list_size": "centre",
+              "list_size": "droite",
               "distance": 50
             }
           },
