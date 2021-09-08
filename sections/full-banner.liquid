@@ -592,25 +592,17 @@ main{
         let push = false;
         let decalage = [0] 
                            
-        /*ele.addEventListener('touchstart', function(e) {
-        // Iterate through the touch points and log each screenX/Y coordinate.
-        // The unit of each coordinate is CSS pixels.
-        var i;
-        for (i=0; i < e.touches.length; i++) {
-          console.log("touchpoint[" + i + "].screenX = " + e.touches[i].screenX);
-          console.log("touchpoint[" + i + "].screenY = " + e.touches[i].screenY);
-        }
-        }, false);  */                   
-                              
+                             
+                             
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
         ele.addEventListener("touchmove", handleMove);        
 
          
           
-        ele.addEventListener("mousedown",handleStart); 
-        ele.addEventListener("mousemove",handleMove);            
-       	ele.addEventListener("mouseup",handleEnd); 
+        ele.addEventListener("mousedown",mouseStart); 
+        ele.addEventListener("mousemove",mouseMove);            
+       	ele.addEventListener("mouseup",mouseEnd); 
                       
                       
    //========================telephone tactile ================================
@@ -621,46 +613,116 @@ main{
         
                        
                    
-         function handleStart(event) {
-              
+         function mouseStart(event) {
             push = true
             elements.style.transition= "all 0s ease-out"   
             stopTimer()
-            if(event.screenX == "undefined"){
-                xStart = e.touches[i].screenX
-            }else{  
-				xStart = event.screenX
-            }
+                             
+			xStart = event.screenX
             console.log(xStart)
                              
         }             
            
         
- 
-		function handleMove(event) {
-             
-          	let decal  
+
+		function mouseMove(event) {
+            
+          	let decal 
             
             if(push == true){
              
               if(xStart - event.screenX < 0 && compteur == 0){ 
-					if(event.screenX == "undefined"){
-                      decal = -slideWidth * nImage - (xStart - touchItem.screenX)
-                      decalage[0] = xStart - touchItem.screenX
-                    }else{
-                      
-                      decal = -slideWidth * nImage - (xStart - event.screenX)  
-                      decalage[0] = xStart - event.screenX 
-                    }
+
+                  decal = -slideWidth * nImage - (xStart - event.screenX)  
+                  decalage[0] = xStart - event.screenX  
                    document.getElementById("console").innerHTML = decalage[0] 
               }else{
-                  if(event.screenX == "undefined"){
-                      decal = -slideWidth * compteur - (xStart - touchItem.screenX)
-                    }else{ 
-                  		decal = -slideWidth * compteur - (xStart - event.screenX)
-                    }
+                  decal = -slideWidth * compteur - (xStart - event.screenX)  
               }                 
               ele.style.transform = `translateX(${decal}px)` 
+            }
+        }
+                       
+       	function mouseEnd(evt) { 
+            push = false 
+            elements.style.transition= "all 1s ease-out" 
+            startTimer()
+            if(xStart - event.screenX < 0 && compteur == 0){ 
+                                         
+		 		if(xStart - event.screenX < -150){
+                  decal = -slideWidth * nImage - (xStart - event.screenX)  
+                  decalage[0] = xStart - event.screenX 
+                                         
+                                         
+                                         
+                   if(spam == false){
+                      
+                      console.log("test") 
+                      compteur-- 
+                      if(compteur == -1){ 
+                            compteur = nImage
+                            elements.style.transition= "all 1s ease-out" 
+                             compteur--  
+                             decal = -slideWidth * compteur
+
+                        }
+                      decal = -slideWidth * compteur
+                      elements.style.transform = `translateX(${decal}px)`
+
+                      spam = true
+                      setTimeout(pointColor,500)   
+                      setTimeout(noSpam,1000)  
+                    }
+                  }else{
+                  	 compteur = nImage -1
+                      
+                      slideNext() 
+                  } 
+                                           
+            }else{  
+              if(xStart - event.screenX < -150){   
+                  slidePrev()
+              }else if(xStart - event.screenX > 150){ 
+                  slideNext()       
+              }else{
+                  let decal = -slideWidth * compteur  
+                  ele.style.transform = `translateX(${decal}px)` 
+              }
+            }
+            setTimeout(function(){decalage[0] = 0},1000)  
+           	console.log(xStart - event.screenX) 
+        }  
+                      
+                      
+          //==================================//  
+                      
+        function handleStart(event) {
+            push = true
+            elements.style.transition= "all 0s ease-out"   
+            stopTimer()
+                             
+			xStart = event.touches[0].screenX
+            console.log(xStart)
+                             
+        }             
+           
+    
+
+		function handleMove(event) {
+            
+          	let decal 
+            
+            if(push == true){
+             
+              if(xStart - event.touches[0].screenX < 0 && compteur == 0){ 
+
+                  decal = -slideWidth * nImage - (xStart - event.touches[0].screenX)  
+                  decalage[0] = xStart - event.touches[0].screenX  
+                   document.getElementById("console").innerHTML = decalage[0] 
+              }else{
+                  decal = -slideWidth * compteur - (xStart - event.touches[0].screenX)  
+              }                 
+              ele.style.transform = `translateX(${decal}px)`  
             }
         }
                        
@@ -713,7 +775,7 @@ main{
             setTimeout(function(){decalage[0] = 0},1000)  
            	console.log(xStart - event.screenX) 
         }             
-                                 
    		
+          
   
 {% endjavascript %}
