@@ -416,7 +416,7 @@ main{
 	let compteur = 0
     let spam = false
 	let timer, elements, slides, slideWidth   
-    let decalage = 0
+    
 	const boitePoint = document.getElementById("petitPoint")
 
 	var time = document.getElementById("time").innerText; 
@@ -592,7 +592,8 @@ main{
         let ele = document.querySelector(".elements")
         let xStart
         let push = false;
-                      
+        let decalage = 0
+                             
          ele.addEventListener("mousedown",function(event){
             push = true
             elements.style.transition= "all 0s ease-out" 
