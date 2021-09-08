@@ -546,7 +546,7 @@ main{
         console.log("test") 
         compteur-- 
         if(compteur == -1){
-              compteur = nImage
+              compteur = nImage + 1
               elements.style.transition= "all 0s ease-out"
               decal = -slideWidth * compteur 
               elements.style.transform = `translateX(${decal}px)` 
@@ -575,7 +575,7 @@ main{
 	var lesPoints = document.getElementsByClassName("point")
       for(i=0;i<nImage;i++){
         let pointColor = compteur
-        if (pointColor == nImage){
+        if (pointColor == nImage){ 
         	pointColor = 0 
         }
 		if(i==pointColor - 1){  
@@ -589,7 +589,7 @@ main{
 
   function slideNextinfinit(){
         elements.style.transition= "all 0s ease-out" 
-         compteur = 0  
+         compteur = 1  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
          setTimeout(function(){elements.style.transition= "1s linear"},100)  
