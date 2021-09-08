@@ -579,6 +579,7 @@ main{
                       
          ele.addEventListener("mousedown",function(event){  
 			xStart = event.screenX
+            console.log(xStart)
         });
         
         ele.addEventListener("mousemove",function(event){   
@@ -591,6 +592,7 @@ main{
             }else if(xStart - event.screenX > 0){ 
               	slidePrev()       
             }
+           	console.log(xStart - event.screenX) 
         });
   
         }
