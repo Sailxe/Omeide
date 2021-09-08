@@ -3,6 +3,14 @@
   <div id="console"> </div>
   <div class="diapo">
       <div class="elements">
+        
+        
+        
+                  	
+            		
+                          
+                          
+                          
         {% assign premier = true %}
         {%for block in section.blocks %}
         		{% if premier == true%}
@@ -23,14 +31,12 @@
                         <a class="lienHomePage" href="{{block.settings.buttonLien}}">
                           <div class="bouton"><p class="textBouton">{{block.settings.buttonText}}</p></div>
                         </a>
-                        
- 							  
+                 	  
                       </div>
                     </div>
             		{% assign premier = false %} 
             	{% elsif premier == false%}
                     <div class="element">
- 
                             <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
 
                         {% if block.settings.centre == "droite" %}
@@ -53,6 +59,9 @@
             	{% endif %}
           
         {%endfor%}
+                          
+                          
+                          
         {% assign premier = true %}
         {%for block in section.blocks %}
         		{% if premier == true%}
@@ -80,6 +89,9 @@
             		{% assign premier = false %} 
                 {%endif%} 
          {% endfor %}
+                          
+                          
+                          
        </div>
     {% if section.settings.fleche %}
     <div id="nav-gauche" class="las la-chevron-left"><img id="image-gauche" src="{{section.settings.fleche | img_url:'50px'}}"></div>	
