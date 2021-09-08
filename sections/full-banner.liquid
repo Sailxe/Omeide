@@ -640,12 +640,15 @@ main{
                     compteur-- 
                     if(compteur == -1){
                     console.log("ici") 
-                            
+                          compteur = nImage
+                          
+                          
+                           
 
                           elements.style.transition= "all 1s ease-out" 
                            compteur--  
                            decal = -slideWidth * compteur
-                           //elements.style.transform = `translateX(4500px)`     
+                             
                       }
                     decal = -slideWidth * compteur
                     elements.style.transform = `translateX(${decal}px)`
