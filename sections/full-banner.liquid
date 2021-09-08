@@ -587,11 +587,14 @@ main{
        img[i].setAttribute('draggable', false);  
                              
   }
+                             
+        let ele = document.querySelector(".elements") 
+                             
         ele.addEventListener("touchstart", handleStart);
         ele.addEventListener("touchend", handleEnd);
         ele.addEventListener("touchmove", handleMove);         
 
-        let ele = document.querySelector(".elements")
+        
         let xStart
         let push = false;
         let decalage = [0]
