@@ -33,11 +33,13 @@
  
                             <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);"/>
 
-                        {% if block.settings.droite-gauche == true %}
+                        {% if block.settings.centre == droite %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%;">
+                        {% elsif block.settings.centre == gauche %}
+                        <div class="caption" style="align-items:flex-start; left:{{block.settings.distance}}%;"> 
                         {% else %}
-                        <div class="caption" style="align-items:flex-start; left:{{block.settings.distance}}%;">
-                        {% endif %}
+                          <div class="caption" style="align-items:centre; left:{{block.settings.distance}}%;">  
+                        {% endif %} 
                           <h2 class="titre">{{block.settings.heading}}</h2>
                           <h3 class="sousText">{{block.settings.sousText}}</h3>
  
