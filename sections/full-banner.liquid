@@ -546,10 +546,10 @@ main{
         console.log("test") 
         compteur-- 
         if(compteur == 0){  
-              decal = -slideWidth * compteur 
+              decal = 0  
               elements.style.transform = `translateX(${decal}px)`  
               compteur = nImage + 1 
-              
+               
               setTimeout(slidePrevInfinit ,1000)    
           }
         decal = -slideWidth * compteur
