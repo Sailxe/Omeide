@@ -648,7 +648,10 @@ main{
                           console.log("ici") 
                           //elements.style.transform = `translateX(4188px)`   
 
-                          setTimeout(slidePrevInfinit ,1)   
+                          elements.style.transition= "all 1s ease-out" 
+                           compteur--  
+                           decal = -slideWidth * compteur
+                           elements.style.transform = `translateX(4188px)`   
                       }
                     decal = -slideWidth * compteur
                     elements.style.transform = `translateX(${decal}px)`
