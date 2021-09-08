@@ -597,21 +597,21 @@ main{
         
         let xStart
         let push = false;
-        let decalage = [0]
+        let decalage = [0] 
                              
          ele.addEventListener("mousedown",function(event){
-            function handleStart(event)
+            handleStart(event)
                              
         });
         
         ele.addEventListener("mousemove",function(event){
             
-          	function handleMove(event)
+          	handleMove(event)
         });
                        
        	ele.addEventListener("mouseup",function(event){
                               
-            function handleEnd(evt)
+            (event)
         });
                       
                       
@@ -653,7 +653,7 @@ main{
             }
         }
                        
-       	function handleEnd(evt) { 
+       	function handleEnd(event) { 
             push = false 
             elements.style.transition= "all 1s ease-out" 
             startTimer()
