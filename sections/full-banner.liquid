@@ -627,7 +627,8 @@ main{
             elements.style.transition= "all 1s ease-out" 
             startTimer()
             if(xStart - event.screenX < 0 && compteur == 0){ 
-		console.log("ici") 
+                                         
+		 
                   decal = -slideWidth * nImage - (xStart - event.screenX)  
                   decalage[0] = xStart - event.screenX 
                                          
@@ -638,6 +639,7 @@ main{
                     console.log("test") 
                     compteur-- 
                     if(compteur == -1){
+                    console.log("ici") 
                           compteur = nImage
                           elements.style.transition= "all 0s ease-out"
                           decal = -slideWidth * compteur - 4200  
