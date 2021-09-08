@@ -132,9 +132,9 @@
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
-              "droite-gauche": false,
-              "list_size": "droite",
-              "distance": 50
+              "centre": "droite",
+              "distance": 50,
+              "hauteur": 40
             }
           },
           "56036843-c410-4791-a384-2ac7352c4615": {
@@ -146,9 +146,9 @@
               "sousText": "click et tu verra",
               "buttonText": "CLICK !!!",
               "buttonLien": "https:\/\/www.google.fr\/",
-              "droite-gauche": false,
-              "list_size": "droite",
-              "distance": 20
+              "centre": "droite",
+              "distance": 20,
+              "hauteur": 40
             }
           },
           "c5baac6f-60d2-4f30-af87-910d8bfcb296": {
@@ -160,9 +160,9 @@
               "sousText": "nos coffrets",
               "buttonText": "colection",
               "buttonLien": "https:\/\/www.omeide-france.fr\/collections\/nos-coffrets-en-precommandes",
-              "droite-gauche": false,
-              "list_size": "droite",
-              "distance": 64
+              "centre": "droite",
+              "distance": 64,
+              "hauteur": 40
             }
           },
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01": {
@@ -174,9 +174,9 @@
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
-              "droite-gauche": true,
-              "list_size": "droite",
-              "distance": 37
+              "centre": "droite",
+              "distance": 37,
+              "hauteur": 40
             }
           }
         },
@@ -187,7 +187,7 @@
           "6c5d9e31-ea32-4d6f-ac35-928063e8cc01"
         ],
         "settings": {
-          "transitionTime": "9000",
+          "transitionTime": "900000000000",
           "points": "#cf1b1b",
           "lePoint": "#2353ca"
         }
