@@ -481,8 +481,8 @@ main{
                            
         function selectPoint(index){
             point.addEventListener("click",function(){           
-              compteur = index
-              let decal = -slideWidth * (compteur + 2)
+              compteur = index + 1 
+              let decal = -slideWidth * (compteur + 1)
               elements.style.transform = `translateX(${decal}px)`
 
               pointColor()
