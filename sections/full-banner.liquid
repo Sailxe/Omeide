@@ -415,6 +415,7 @@ main{
 	//variables
 	let compteur = 0
     let spam = false
+                      
 	let timer, elements, slides, slideWidth   
     
 	const boitePoint = document.getElementById("petitPoint")
@@ -505,7 +506,7 @@ main{
         }        
         spam = true
         setTimeout(pointColor,500)  
-        setTimeout(noSpam,1000) 
+        setTimeout(noSpam,500) 
       }
   }
  
@@ -614,6 +615,8 @@ main{
                        
                    
          function mouseStart(event) {
+            if (spam == false){
+            spam = true
             ele.style.transform == 'none'
             push = true
             elements.style.transition= "all 0s ease-out"   
@@ -621,6 +624,7 @@ main{
                              
 			xStart = event.screenX
             console.log(xStart)
+            }
                              
         }             
            
@@ -693,12 +697,14 @@ main{
             }
             setTimeout(function(){decalage[0] = 0},1000)  
            	console.log(xStart - event.screenX) 
+            setTimeout(noSpam,500) 
         }  
                       
                       
           //==================================//  
                       
         function handleStart(event) {
+            if(spam == false){
             ele.style.transform == 'none' 
             push = true
             elements.style.transition= "all 0s ease-out"   
@@ -706,6 +712,8 @@ main{
                              
 			xStart = event.touches[0].screenX
             console.log(xStart)
+            spam = true
+            }
                              
         }             
            
@@ -778,7 +786,8 @@ main{
               }
             }
             setTimeout(function(){decalage[0] = 0},1000)  
-           	console.log(xEnd)    
+           	console.log(xEnd)
+            setTimeout(noSpam,500)  
         }             
    		
           
