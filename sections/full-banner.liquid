@@ -62,7 +62,7 @@
         		{% if premier == true%}
                   	<div class="element active"> 
 
-                          <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
+                          <img class="imageEnPlus" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
                       
                       	{% if block.settings.centre == "droite" %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
@@ -799,7 +799,10 @@ main{
            	console.log(xEnd)  
             }
         }             
+        
                       
+        imageEnPlus
+        document
   //=================option celon la résolution de l'écran ===============================//
         
                       
@@ -811,16 +814,16 @@ main{
             let caption = document.getElementsByClassName("caption")
             
                               
-            titre.style.fontSize = "25px";
-            sousText.style.fontSize = "20px";
-            informationBox.style.fontSize = "12px";
+            titre[0].style.fontSize = "25px";
+            sousText[0].style.fontSize = "20px";
+            informationBox[0].style.fontSize = "12px";
                       
-            titre.style.width = "100%";
-            sousText.style.width = "100%";
+            titre[0].style.width = "100%";
+            sousText[0].style.width = "100%";
                       
-            caption.style.left = "50%";
-            caption.style.justifyContent = "center";
-            caption.style.alignItems = "center";
+            caption[0].style.left = "50%";
+            caption[0].style.justifyContent = "center";
+            caption[0].style.alignItems = "center";
                           
        }
                       
