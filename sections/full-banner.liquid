@@ -508,6 +508,7 @@ main{
         setTimeout(noSpam,500) 
       }
   }
+                           
  
   function slidePrev(){ 
       if(spam == false){
@@ -565,6 +566,7 @@ main{
          setTimeout(function(){elements.style.transition= "0.5s linear"},100)  
         }
         
+                      
   function slidePrevInfinit(){
          
          elements.style.transition= "all 0.5s ease-out" 
@@ -587,6 +589,7 @@ main{
        img[i].setAttribute('draggable', false);  
                              
   }	
+                             
         let ele = document.querySelector(".elements")
         let xStart,xEnd
         let push = false;
@@ -646,7 +649,8 @@ main{
             }
             }
         }
-                       
+                 
+                      
        	function mouseEnd(event) { 
             if(spam == false && push == true){   
             push = false 
@@ -701,6 +705,7 @@ main{
                       
                       
           //==================================//  
+            
                       
         function handleStart(event) {
             if(spam == false){
@@ -736,7 +741,8 @@ main{
               }
             }
         }
-                        
+               
+                                                        
        	function handleEnd(event) {  
             if(spam == false && push == true){
             push = false 
@@ -772,7 +778,7 @@ main{
                   	 compteur = nImage -1
                       
                       slideNext() 
-                  } 
+                  }  
                                            
             }else{  
               if(xEnd < -150){   
