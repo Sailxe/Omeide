@@ -620,11 +620,17 @@ main{
         ele.addEventListener("touchend", handleEnd);
         document.addEventListener("touchmove", handleMove);         
 
-         
+         if (navigator.userAgent.indexOf("like Mac") != -1){
+            ele.addEventListener("mousedown",mouseStart);              
+            document.addEventListener("mouseup",mouseEnd); 
+                             
+         }else{
           
-        ele.addEventListener("mousedown",mouseStart); 
-        ele.addEventListener("mousemove",mouseMove);             
-       	document.addEventListener("mouseup",mouseEnd); 
+          ele.addEventListener("mousedown",mouseStart); 
+          ele.addEventListener("mousemove",mouseMove);             
+          document.addEventListener("mouseup",mouseEnd); 
+        }    
+                            
                       
                       
    //========================telephone tactile ================================
