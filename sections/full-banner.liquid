@@ -799,7 +799,62 @@ main{
            	console.log(xEnd)  
             }
         }             
-   		
-          
+                      
+  //=================option celon la résolution de l'écran ===============================//
+        
+                      
+       if(document.width > 1024 ){
+                      
+       		let titre = document.getElementsByClassName("titre")
+            let sousText = document.getElementsByClassName("sousText")
+            let informationBox = document.getElementsByClassName("informationBox")
+            let caption = document.getElementsByClassName("caption")
+            
+                              
+            titre.style.fontSize = "25px";
+            sousText.style.fontSize = "20px";
+            informationBox.style.fontSize = "12px";
+                      
+            titre.style.width = "100%";
+            sousText.style.width = "100%";
+            caption.style.left:50%;   
+           
+            
+            
+                      
+            
+       }
+                      
+   /*     
+      @media screen and (max-width: 1024px)
+{
+	.titre{
+		font-size: 25px;
+        width:100%;
+	} 
+    .sousText{
+		font-size: 20px;
+         width:100%;
+	}
+	.textBouton{
+		font-size: 12px; 
+	} 
+	.informationBox{
+  		bottom:20px;  
+	
+	}
+	#nav-droite,#nav-gauche{
+		top:60%; 
+	} 
+	.caption{
+		left: 50%;
+		justify-content:center; 
+		align-items:center;  
+	}
+    #nav-droite,#nav-gauche{
+    	z-index:-1;                   
+    }
+}
+                      */
   
 {% endjavascript %}
