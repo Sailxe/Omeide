@@ -801,8 +801,15 @@ main{
         }             
         
                       
-        imageEnPlus
-        document
+        let imageEnPlus = document.getElementsByClassName("imageEnPlus")
+                      
+        imageEnPlus.addEventListener("mousedown",function(event){
+        	
+              event.stopPropagation();
+              event.preventDefault(); 
+                      
+        })
+        
   //=================option celon la résolution de l'écran ===============================//
         
                       
