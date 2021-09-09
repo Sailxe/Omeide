@@ -698,9 +698,9 @@ main{
                   } 
                                            
             }else{  
-              if(xStart - event.screenX < -150){   
+              if(xStart - event.screenX < -100){   
                   slidePrev()
-              }else if(xStart - event.screenX > 150){ 
+              }else if(xStart - event.screenX > 100){ 
                   slideNext()       
               }else{
                   let decal = -slideWidth * compteur  
@@ -790,9 +790,9 @@ main{
                   }  
                                            
             }else{  
-              if(xEnd < -150){   
+              if(xEnd < -100){    
                   slidePrev()
-              }else if(xEnd > 150){ 
+              }else if(xEnd > 100){ 
                   slideNext()       
               }else{
                   let decal = -slideWidth * compteur  
