@@ -333,7 +333,7 @@ main{
 
 .elements{
 	display: flex; 
-	transition: all 0.5s ease-out;
+	transition: all 0.4s ease-out;
 	
 }
 
@@ -568,13 +568,13 @@ main{
          compteur = 0  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
-         setTimeout(function(){elements.style.transition= "0.5s linear"},100)  
+         setTimeout(function(){elements.style.transition= "0.4s linear"},100)  
         }
         
                       
   function slidePrevInfinit(){
          
-         elements.style.transition= "all 0.5s ease-out" 
+         elements.style.transition= "all 0.4s ease-out" 
          compteur--  
          decal = -slideWidth * compteur
 	  	 elements.style.transform = `translateX(${decal}px)`
@@ -659,7 +659,7 @@ main{
        	function mouseEnd(event) { 
             if(spam == false && push == true){   
             push = false 
-            elements.style.transition= "all 0.5s ease-out" 
+            elements.style.transition= "all 0.4s ease-out" 
             startTimer()
             if(xStart - event.screenX < 0 && compteur == 0){ 
                                          
@@ -675,7 +675,7 @@ main{
                       compteur-- 
                       if(compteur == -1){ 
                             compteur = nImage
-                            elements.style.transition= "all 0.5s ease-out" 
+                            elements.style.transition= "all 0.4s ease-out" 
                              compteur--  
                              decal = -slideWidth * compteur
 
@@ -751,7 +751,7 @@ main{
        	function handleEnd(event) {  
             if(spam == false && push == true){
             push = false 
-            elements.style.transition= "all 0.5s ease-out" 
+            elements.style.transition= "all 0.4s ease-out" 
             startTimer()
             if(xEnd < 0 && compteur == 0){ 
                                          
@@ -767,7 +767,7 @@ main{
                       compteur-- 
                       if(compteur == -1){ 
                             compteur = nImage
-                            elements.style.transition= "all 0.5s ease-out" 
+                            elements.style.transition= "all 0.4s ease-out" 
                              compteur--  
                              decal = -slideWidth * compteur
 
@@ -850,7 +850,7 @@ main{
 	} 
 	.informationBox{
   		bottom:20px;  
-	
+	 
 	}
 	#nav-droite,#nav-gauche{
 		top:60%; 
