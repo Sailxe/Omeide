@@ -703,39 +703,42 @@ main{
           //==================================//  
                       
         function handleStart(event) {
-            ele.style.transform == 'none' 
-            push = true
-            elements.style.transition= "all 0s ease-out"   
-            stopTimer()
-                             
-			xStart = event.touches[0].screenX
-            console.log(xStart)
+            if(spam == false){
+              ele.style.transform == 'none' 
+              push = true
+              elements.style.transition= "all 0s ease-out"   
+              stopTimer()
+
+              xStart = event.touches[0].screenX
+              console.log(xStart)
+            }
                              
         }             
            
     
 
 		function handleMove(event) {
-            
-          	let decal 
-            
-            if(push == true){
-             
-              if(xStart - event.touches[0].screenX < 0 && compteur == 0){ 
+            if(spam == false){
+              let decal 
 
-                  decal = -slideWidth * nImage - (xStart - event.touches[0].screenX)  
-                  decalage[0] = xStart - event.touches[0].screenX  
-                   document.getElementById("console").innerHTML = decalage[0] 
-              }else{
-                  decal = -slideWidth * compteur - (xStart - event.touches[0].screenX)  
-              }                 
-              ele.style.transform = `translateX(${decal}px)` 
-              xEnd = xStart - event.touches[0].screenX
+              if(push == true){
+
+                if(xStart - event.touches[0].screenX < 0 && compteur == 0){ 
+
+                    decal = -slideWidth * nImage - (xStart - event.touches[0].screenX)  
+                    decalage[0] = xStart - event.touches[0].screenX  
+                     document.getElementById("console").innerHTML = decalage[0] 
+                }else{
+                    decal = -slideWidth * compteur - (xStart - event.touches[0].screenX)  
+                }                 
+                ele.style.transform = `translateX(${decal}px)` 
+                xEnd = xStart - event.touches[0].screenX
+              }
             }
         }
                         
-       	function handleEnd(event) { 
-            
+       	function handleEnd(event) {  
+            if(spam == false && push == true){
             push = false 
             elements.style.transition= "all 0.5s ease-out" 
             startTimer()
@@ -782,7 +785,8 @@ main{
               }
             }
             setTimeout(function(){decalage[0] = 0},1000)  
-           	console.log(xEnd)    
+           	console.log(xEnd)  
+            }
         }             
    		
           
