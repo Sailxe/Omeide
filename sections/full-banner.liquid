@@ -23,12 +23,12 @@
                       {% endif %}  
                         <h2 class="titre">{{block.settings.heading}}</h2>
                         <h3 class="sousText">{{block.settings.sousText}}</h3>
-                          <p>test</p> 
-						<div>
+                        
+						
                           <a class="lienHomePage" href="{{block.settings.buttonLien}}">
                             <div class="bouton"><p class="textBouton">{{block.settings.buttonText}}</p></div>
                           </a>
-                        </div> 
+                         
                         
  							  
                       </div>
@@ -418,6 +418,9 @@ main{
     #nav-droite,#nav-gauche{
     	z-index:-1;   
         display:none; 
+    }
+    .lienHomePage{
+    	left:50%;                   
     }
 }
 
