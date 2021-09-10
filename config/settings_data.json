@@ -127,14 +127,14 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Omeide-3.jpg",
-              "blackFiltre": 70,
+              "blackFiltre": 69,
               "heading": "Le meilleur savon",
               "sousText": "c'est celui qu'on fait soi-même",
               "buttonText": "je découvre",
               "buttonLien": "https:\/\/www.omeide-france.fr\/",
               "centre": "gauche",
-              "distance": 50,
-              "hauteur": 40
+              "distance": 38,
+              "hauteur": 34
             }
           },
           "56036843-c410-4791-a384-2ac7352c4615": {
