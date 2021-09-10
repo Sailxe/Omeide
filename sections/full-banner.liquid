@@ -11,9 +11,9 @@
         {%for block in section.blocks %}
         		{% if premier == true%}
                   	<div class="element active"> 
-
+						<div class="rogne">
                           <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
-                      
+                      	</div> 
                       {% if block.settings.centre == "droite" %}
                       <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;"> 
                       {% elsif block.settings.centre == "gauche" %}
@@ -39,9 +39,9 @@
             		{% assign premier = false %} 
             	{% elsif premier == false%}
                     <div class="element">
- 
+ 						<div class="rogne">
                             <img class="imageHomePage" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
-
+                      	</div>
                         {% if block.settings.centre == "droite" %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
                         {% elsif block.settings.centre == "gauche" %}
@@ -69,9 +69,9 @@
         {%for block in section.blocks %}
         		{% if premier == true%}
                   	<div class="element active"> 
-
+						<div class="rogne">
                           <img class="imageEnPlus" srcset ="{{block.settings.image | img_url:'master'}}" style="filter: brightness({{block.settings.blackFiltre}}%);" draggable="false"/>
-                      
+                      	</div>
                       	{% if block.settings.centre == "droite" %}
                         <div class="caption" style="align-items:flex-end; right:{{block.settings.distance}}%; top:{{block.settings.hauteur}}%;">
                         {% elsif block.settings.centre == "gauche" %}
@@ -397,6 +397,12 @@ main{
 	font-size:30px; 
 	cursor:pointer; 
 }
+                      
+                      
+.rogne { position: relative; width: 200px; height: 100px; overflow: hidden; }
+
+.rogne img { position: absolute; top: -50px; left: -60px; }                        
+                      
 
 @media screen and (max-width: 1024px)
 {
