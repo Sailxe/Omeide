@@ -879,8 +879,8 @@ main{
            let hautIMG = imageHomePage[0].clientHeight   
            let largIMG = imageHomePage[0].clientWidth
                        
-           let tauxDeConvertionH = hautIMG/hautEcran
-           let tauxDeConvertionL = largIMG/largEcran          
+           let tauxDeConvertionH = hautEcran/hautIMG
+           let tauxDeConvertionL = largEcran/largIMG         
                       
              console.log(hautEcran)
              console.log(largIMG) 
@@ -891,9 +891,9 @@ main{
            		console.log(i) 
               	rogne[i].style.height = hautEcran + "px" 
                 rogne[i].style.width = largEcran +"px" 
-                                         
-                imageHomePage[i].style.height = tauxDeConvertionH*hautIMG + 0 + "px"                      
-                imageHomePage[i].style.width = tauxDeConvertionL*largIMG + 0 + "px"       
+                                          
+                imageHomePage[i].style.height = hautIMG + 0 + "px"                     
+                imageHomePage[i].style.width = largIMG + 0 + "px"       
                                         
                 imageHomePage[i].style.top = -0 + "px"                    
                 imageHomePage[i].style.left = -0 + "px"    
