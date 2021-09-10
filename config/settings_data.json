@@ -178,28 +178,13 @@
               "distance": 37,
               "hauteur": 40
             }
-          },
-          "e08b88e8-e7dc-4a6a-86c1-ca748ed53ed3": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/supermarket-2158692_1920.jpg",
-              "blackFiltre": 100,
-              "heading": "",
-              "sousText": "",
-              "buttonText": "",
-              "buttonLien": "",
-              "centre": "droite",
-              "distance": 40,
-              "hauteur": 40
-            }
           }
         },
         "block_order": [
           "da943aea-79e3-42bc-9c8e-43c2b3393ec3",
           "56036843-c410-4791-a384-2ac7352c4615",
           "c5baac6f-60d2-4f30-af87-910d8bfcb296",
-          "6c5d9e31-ea32-4d6f-ac35-928063e8cc01",
-          "e08b88e8-e7dc-4a6a-86c1-ca748ed53ed3"
+          "6c5d9e31-ea32-4d6f-ac35-928063e8cc01"
         ],
         "settings": {
           "transitionTime": "3000",
