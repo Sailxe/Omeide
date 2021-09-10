@@ -846,7 +846,7 @@ main{
   //=================option celon la résolution de l'écran ===============================//
         
                       
-         if(document.width > 1024 ){
+         /*if(document.width > 1024 ){
                       
        		let titre = document.getElementsByClassName("titre")
             let sousText = document.getElementsByClassName("sousText")
@@ -867,14 +867,20 @@ main{
                       
        
                           
-       }
+       }*/
                       
                       
            let hautEcran = window.innerHeight 
-           let largEcran = window.innerWidth
+           let largEcran = window.innerWidth 
            document.getElementById("console").innerHTML = hautEcran   
            
-           let
+           let rogne = document.getElementsByClassName("rogne")
+           
+           for(i=0;i<rogne.length){
+           		
+              	rogne[i].style.height = hautEcran
+                rogne[i].style.width = largEcran 
+           }
            
                       
                      
