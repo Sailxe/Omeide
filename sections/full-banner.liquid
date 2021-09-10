@@ -868,13 +868,22 @@ main{
        
                           
        }*/
+                
                       
+           let rogne = document.getElementsByClassName("rogne")  
+           let imageHomePage = document.getElementsBYClassName("imageHomePage")
                       
            let hautEcran = window.innerHeight 
            let largEcran = window.innerWidth 
-           document.getElementById("console").innerHTML = hautEcran   
            
-           let rogne = document.getElementsByClassName("rogne")
+           let hautIMG = imageHomePage.innerHeight
+           let largIMG = imageHomage.innerWidth
+                      
+           let tauxDeConvertion = hautEcran/largIMG
+                      
+             
+           document.getElementById("console").innerHTML = tauxDeConvertion   
+           
            
            for(i=0;i<rogne.length;i++){ 
            		console.log(i) 
@@ -883,7 +892,7 @@ main{
            }
            
                       
-                     
+                   
              
                 
                       
