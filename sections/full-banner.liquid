@@ -25,9 +25,12 @@
                         <h3 class="sousText">{{block.settings.sousText}}</h3>
                         
 						
+                          {% if block.settings.buttonText != blank %} 
+                          
                           <a class="lienHomePage" href="{{block.settings.buttonLien}}">
                             <div class="bouton"><p class="textBouton">{{block.settings.buttonText}}</p></div>
                           </a>
+               			  {% endif %}   
                          
                         
  							  
